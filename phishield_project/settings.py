@@ -5,7 +5,16 @@ Django settings for phishield_project project.
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
-
+from dotenv import load_dotenv
+load_dotenv()
+import dj_database_url
+DATABASES = {
+    "default": dj_database_url.config(
+        default="sqlite:///db.sqlite3",
+        conn_max_age=600,
+        ssl_require=True
+    )
+}
 # ------------------------------
 # Base Directory
 # ------------------------------
@@ -77,12 +86,12 @@ WSGI_APPLICATION = 'phishield_project.wsgi.application'
 # ------------------------------
 # Database
 # ------------------------------
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+    #'default': {
+      #  'ENGINE': 'django.db.backends.sqlite3',
+     #   'NAME': BASE_DIR / 'db.sqlite3',
+   # }
+#}
 
 # ------------------------------
 # Password Validation

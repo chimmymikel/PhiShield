@@ -421,3 +421,34 @@ INFO 2025-10-02 13:01:22,842 views Message analysis completed - Risk: suspicious
 [2025-10-02 18:05:16,765] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
 [2025-10-02 18:05:16,770] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
 [2025-10-02 18:05:18,772] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-02 20:43:00,030] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-02 20:43:04,582] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-02 20:43:21,543] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-02 20:43:45,848] INFO django.server - "POST /register/ HTTP/1.1" 200 17356
+[2025-10-02 20:44:06,289] INFO phishield - User registered and auto-verified: user
+[2025-10-02 20:44:06,495] INFO django.server - "POST /register/ HTTP/1.1" 302 0
+[2025-10-02 20:44:06,846] INFO phishield - Dashboard accessed by: user
+[2025-10-02 20:44:07,126] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 42384
+[2025-10-02 20:47:58,965] INFO django.utils.autoreload - C:\Users\PC\PycharmProjects\PhiShield\phishield_project\settings.py changed, reloading.
+[2025-10-02 20:47:59,451] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-02 20:48:58,548] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-02 20:49:05,387] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-02 20:49:05,729] INFO phishield - Dashboard accessed by: user
+[2025-10-02 20:49:06,006] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41720
+[2025-10-02 20:49:11,477] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
+[2025-10-02 20:49:11,487] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-02 20:49:13,355] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-02 20:49:35,158] INFO django.server - "POST /register/ HTTP/1.1" 200 17360
+[2025-10-02 20:49:51,387] INFO django.server - "POST /register/ HTTP/1.1" 200 17360
+[2025-10-02 20:50:05,731] INFO phishield - User registered and auto-verified: keyboard
+[2025-10-02 20:50:05,932] INFO django.server - "POST /register/ HTTP/1.1" 302 0
+[2025-10-02 20:50:06,271] INFO phishield - Dashboard accessed by: keyboard
+[2025-10-02 20:50:06,539] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 42419
+[2025-10-02 20:57:07,048] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
+[2025-10-02 20:57:07,055] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-02 20:57:10,301] INFO django.server - "POST /login/ HTTP/1.1" 200 12339
+[2025-10-02 20:57:16,312] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-02 20:57:48,467] INFO phishield - User registered and auto-verified: phishield
+[2025-10-02 20:57:48,667] INFO django.server - "POST /register/ HTTP/1.1" 302 0
+[2025-10-02 20:57:49,006] INFO phishield - Dashboard accessed by: phishield
+[2025-10-02 20:57:49,273] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 42421

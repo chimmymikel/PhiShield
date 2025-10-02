@@ -118,3 +118,10 @@
 [2025-10-02 18:04:55,148] INFO phishield - Profile accessed by: habon
 [2025-10-02 18:05:11,377] INFO phishield - Profile accessed by: habon
 [2025-10-02 18:05:13,319] INFO phishield - Dashboard accessed by: habon
+[2025-10-02 20:44:06,289] INFO phishield - User registered and auto-verified: user
+[2025-10-02 20:44:06,846] INFO phishield - Dashboard accessed by: user
+[2025-10-02 20:49:05,729] INFO phishield - Dashboard accessed by: user
+[2025-10-02 20:50:05,731] INFO phishield - User registered and auto-verified: keyboard
+[2025-10-02 20:50:06,271] INFO phishield - Dashboard accessed by: keyboard
+[2025-10-02 20:57:48,467] INFO phishield - User registered and auto-verified: phishield
+[2025-10-02 20:57:49,006] INFO phishield - Dashboard accessed by: phishield
