@@ -1,0 +1,137 @@
+{% extends 'phishield/base.html' %}
+{% block title %}Contact Us - PhiShield{% endblock %}
+
+{% block content %}
+<div class="content-card mt-4">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p class="text-muted">Have questions or suggestions? We'd love to hear from you!</p>
+
+    <div class="row mt-4">
+        <div class="col-md-8">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Your Name *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-info-circle"></i> Contact Information</h5>
+                </div>
+                <div class="card-body">
+                    <h6><i class="fas fa-envelope text-primary"></i> Email</h6>
+                    <p class="small">support@phishield.com</p>
+
+                    <h6><i class="fas fa-clock text-warning"></i> Response Time</h6>
+                    <p class="small">Typically within 24-48 hours</p>
+
+                    <h6><i class="fas fa-exclamation-triangle text-danger"></i> Security Reports</h6>
+                    <p class="small">For security vulnerabilities, please mention "SECURITY" in subject</p>
+
+                    <hr>
+
+                    <h6><i class="fas fa-shield-alt text-success"></i> Support Hours</h6>
+                    <p class="small mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p class="small">Weekends: Emergency support only</p>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h6><i class="fas fa-lightbulb text-info"></i> Before Contacting</h6>
+                    <ul class="small mb-0">
+                        <li>Check our documentation</li>
+                        <li>Review the security tips</li>
+                        <li>Include relevant URLs if reporting phishing</li>
+                        <li>Provide detailed descriptions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Additional Information Section -->
+<div class="content-card mt-4">
+    <h4><i class="fas fa-question-circle"></i> Frequently Asked Questions</h4>
+    
+    <div class="accordion mt-3" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    How accurate is PhiShield's detection?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    PhiShield uses multiple detection techniques including URL analysis, keyword scanning, 
+                    and pattern recognition. While we strive for high accuracy, no system is 100% perfect. 
+                    Always exercise caution and use multiple security measures.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Can I report false positives/negatives?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes! We encourage users to report any incorrect classifications. Please include the 
+                    URL/message and why you believe the classification is incorrect. This helps us improve our system.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Is my data stored securely?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    We take data security seriously. Checked URLs and messages are stored encrypted 
+                    and are only accessible to your account. We follow security best practices to protect your information.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

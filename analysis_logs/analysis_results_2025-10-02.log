@@ -1,0 +1,48 @@
+[2025-10-02 12:59:47] | User: Michael | Type: URL | Risk: safe
+Content: https://www.instagram.com/
+Flags: No threats detected
+--------------------------------------------------------------------------------
+[2025-10-02 13:01:22] | User: Michael | Type: MESSAGE | Risk: suspicious
+Content: Subject: Urgent: Verify Your Account Now!
+Message:
+Dear User,
+
+We noticed unusual activity on your account. To prevent suspension, please click the link below and confirm your details immediately:
+http://secure-login-account.verify-now.com
+
+Failure to do so within 24 hours will result in permanent account deactivation.
+
+Thank you for your prompt attention.
+— Account Security Team
+Flags: Suspicious words: login, verify, secure | Contains a link | Urgent language detected: urgent, verify your account
+--------------------------------------------------------------------------------
+[2025-10-02 18:02:23] | User: habon | Type: URL | Risk: safe
+Content: https://www.facebook.com/sunstarcebu
+Flags: No threats detected
+--------------------------------------------------------------------------------
+[2025-10-02 18:03:41] | User: habon | Type: MESSAGE | Risk: dangerous
+Content: Sender: Microsoft Security <security-alert@micr0s0ft-support.com>
+Subject: URGENT: Unusual Sign-in Activity Detected on Your Account
+
+(Email Body)
+
+Microsoft Account Team
+Keeping your account secure
+
+Action Required: Review Unusual Sign-in Activity
+
+Hello,
+
+We detected an unusual sign-in attempt to your Microsoft 365 account on a new device.
+
+Date: October 26, 2023
+
+Time: 11:43 AM (GMT)
+
+Location: Moscow, Russia
+
+Device: Firefox Browser on Windows
+
+IP Address: 192.168.94.27
+Flags: Suspicious words: verify, secure, account | Urgent language detected: urgent, click here | Requests personal information (HIGH RISK)
+--------------------------------------------------------------------------------

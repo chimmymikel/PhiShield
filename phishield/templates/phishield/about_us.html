@@ -1,0 +1,139 @@
+{% extends 'phishield/base.html' %}
+{% block title %}About Us - PhiShield{% endblock %}
+
+{% block content %}
+<div class="content-card mt-4">
+    <h2><i class="fas fa-info-circle"></i> About PhiShield</h2>
+    
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <h4>Our Mission</h4>
+            <p class="lead">
+                PhiShield is a comprehensive phishing detection system designed to protect users 
+                from malicious links and suspicious messages in today's digital landscape.
+            </p>
+            
+            <h5 class="mt-4">What We Do</h5>
+            <ul>
+                <li>Analyze URLs for phishing indicators and suspicious patterns</li>
+                <li>Scan text messages and emails for phishing content</li>
+                <li>Provide real-time threat assessment and risk levels</li>
+                <li>Educate users about phishing prevention best practices</li>
+                <li>Maintain history of security checks for user reference</li>
+            </ul>
+
+            <h5 class="mt-4">Key Features</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6><i class="fas fa-link text-primary"></i> URL Analysis</h6>
+                            <p class="small mb-0">Deep analysis of links for suspicious domains, keywords, and patterns</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6><i class="fas fa-envelope text-warning"></i> Message Scanning</h6>
+                            <p class="small mb-0">Content analysis for phishing attempts in text and email messages</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6><i class="fas fa-history text-success"></i> Check History</h6>
+                            <p class="small mb-0">Comprehensive logging of all security checks and results</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6><i class="fas fa-chart-bar text-info"></i> Risk Assessment</h6>
+                            <p class="small mb-0">Three-tier risk classification (Safe, Suspicious, Dangerous)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-shield-alt"></i> Project Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="fas fa-code fa-3x text-primary"></i>
+                    </div>
+                    <p><strong>Technology Stack:</strong></p>
+                    <ul class="small">
+                        <li>Django Framework</li>
+                        <li>Bootstrap 5</li>
+                        <li>SQLite Database</li>
+                        <li>Python Security Libraries</li>
+                    </ul>
+                    <p><strong>Security Focus:</strong></p>
+                    <ul class="small">
+                        <li>Phishing Detection</li>
+                        <li>User Education</li>
+                        <li>Real-time Analysis</li>
+                        <li>Threat Prevention</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Development Team Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3><i class="fas fa-users"></i> Development Team</h3>
+            
+            <h5 class="mt-4 text-primary">Developers</h5>
+            <div class="row">
+                {% for dev in developers %}
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-user-circle fa-3x text-secondary"></i>
+                            </div>
+                            <h6 class="card-title">{{ dev.name }}</h6>
+                            <p class="card-text text-muted small">{{ dev.role }}</p>
+                            <small class="text-primary">{{ dev.email }}</small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h5 class="mt-4 text-success">Project Management</h5>
+            <div class="row">
+                {% for pm in project_management %}
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-briefcase fa-3x text-success"></i>
+                            </div>
+                            <h6 class="card-title">{{ pm.name }}</h6>
+                            <p class="card-text text-muted small">{{ pm.role }}</p>
+                            <small class="text-primary">{{ pm.email }}</small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info mt-4">
+        <i class="fas fa-lightbulb"></i> 
+        <strong>Note:</strong> This project is developed for educational purposes to demonstrate 
+        phishing detection techniques and raise awareness about online security threats.
+    </div>
+</div>
+{% endblock %}

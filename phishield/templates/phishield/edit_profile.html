@@ -1,0 +1,146 @@
+{% extends "phishield/base.html" %}
+
+{% block title %}Edit Profile - PhiShield{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-sm">
+                <div class="card-header bg-transparent border-bottom-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="mb-0 text-dark fw-bold"><i class="fas fa-user-edit me-2"></i>Edit Profile</h5>
+                            <p class="text-muted mb-0 small">Update your personal information and preferences</p>
+                        </div>
+                        <a href="{% url 'phishield:profile' %}" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-times me-1"></i>Cancel
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <!-- Profile Picture -->
+                        <div class="text-center mb-4">
+                            <div class="position-relative d-inline-block">
+                                {% if profile.profile_picture %}
+                                    <img src="{{ profile.profile_picture.url }}" alt="Current Profile Picture" 
+                                         class="rounded-circle mb-3" width="120" height="120" style="object-fit: cover;" id="profile-preview">
+                                {% else %}
+                                    <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                         style="width: 120px; height: 120px;" id="profile-preview">
+                                        <span class="text-white h3 fw-bold">{{ user.username|first|upper }}</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="mt-2">
+                                <input type="file" class="form-control d-none" id="profile_picture" name="profile_picture" accept="image/*">
+                                <label for="profile_picture" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-camera me-1"></i>Change Photo
+                                </label>
+                                <small class="form-text text-muted d-block">JPG, PNG or GIF. Max 5MB.</small>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <!-- Personal Information -->
+                            <div class="col-12">
+                                <h6 class="border-bottom pb-2 mb-3 text-dark fw-bold">Personal Information</h6>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="first_name" class="form-label fw-bold">First Name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" 
+                                       value="{{ user.first_name }}" placeholder="Enter your first name">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="last_name" class="form-label fw-bold">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" 
+                                       value="{{ user.last_name }}" placeholder="Enter your last name">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-bold">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" 
+                                       value="{{ user.email }}" placeholder="Enter your email address" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" 
+                                       value="{{ profile.phone|default:'' }}" placeholder="+1 (555) 123-4567">
+                            </div>
+
+                            <!-- Professional Information -->
+                            <div class="col-12 mt-4">
+                                <h6 class="border-bottom pb-2 mb-3 text-dark fw-bold">Professional Information</h6>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="company" class="form-label fw-bold">Company</label>
+                                <input type="text" class="form-control" id="company" name="company" 
+                                       value="{{ profile.company|default:'' }}" placeholder="Enter your company name">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="role" class="form-label fw-bold">Role</label>
+                                <select class="form-select" id="role" name="role">
+                                    <option value="employee" {% if profile.role == 'employee' %}selected{% endif %}>Employee</option>
+                                    <option value="manager" {% if profile.role == 'manager' %}selected{% endif %}>Manager</option>
+                                    <option value="security_analyst" {% if profile.role == 'security_analyst' %}selected{% endif %}>Security Analyst</option>
+                                    <option value="admin" {% if profile.role == 'admin' %}selected{% endif %}>Administrator</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="location" class="form-label fw-bold">Location</label>
+                                <input type="text" class="form-control" id="location" name="location" 
+                                       value="{{ profile.location|default:'' }}" placeholder="Enter your city and country">
+                            </div>
+
+                            <!-- Bio -->
+                            <div class="col-12 mt-4">
+                                <h6 class="border-bottom pb-2 mb-3 text-dark fw-bold">About Me</h6>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="bio" class="form-label fw-bold">Bio</label>
+                                <textarea class="form-control" id="bio" name="bio" rows="4" 
+                                          placeholder="Tell us about yourself, your interests, or your experience with cybersecurity...">{{ profile.bio|default:'' }}</textarea>
+                                <small class="form-text text-muted">Share a brief description about yourself (max 500 characters)</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center pt-4 mt-4 border-top">
+                            <a href="{% url 'phishield:profile' %}" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Back to Profile
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i>Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Profile picture preview
+document.getElementById('profile_picture').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('profile-preview').innerHTML = 
+                `<img src="${e.target.result}" class="rounded-circle" width="120" height="120" style="object-fit: cover;">`;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+{% endblock %}

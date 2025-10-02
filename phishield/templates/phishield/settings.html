@@ -1,0 +1,154 @@
+{% extends "phishield/base.html" %}
+
+{% block title %}Settings - PhiShield{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row">
+        <!-- Settings Navigation -->
+        <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-transparent border-bottom-0">
+                    <h6 class="mb-0 text-dark fw-bold">Settings</h6>
+                </div>
+                <div class="list-group list-group-flush rounded">
+                    <a href="{% url 'phishield:profile' %}" class="list-group-item list-group-item-action border-0">
+                        <i class="fas fa-user me-2 text-primary"></i>Profile
+                    </a>
+                    <a href="{% url 'phishield:edit_profile' %}" class="list-group-item list-group-item-action border-0">
+                        <i class="fas fa-edit me-2 text-primary"></i>Edit Profile
+                    </a>
+                    <a href="{% url 'phishield:settings' %}" class="list-group-item list-group-item-action border-0 active">
+                        <i class="fas fa-cog me-2 text-white"></i>Preferences
+                    </a>
+                    <a href="{% url 'phishield:change_password' %}" class="list-group-item list-group-item-action border-0">
+                        <i class="fas fa-lock me-2 text-primary"></i>Change Password
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Content -->
+        <div class="col-lg-9 col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-transparent border-bottom-0">
+                    <h5 class="mb-0 text-dark fw-bold"><i class="fas fa-cog me-2"></i>Application Settings</h5>
+                    <p class="text-muted mb-0 small">Customize your PhiShield experience</p>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        
+                        <!-- Notification Settings -->
+                        <div class="mb-5">
+                            <h6 class="border-bottom pb-2 mb-4 text-dark fw-bold">
+                                <i class="fas fa-bell me-2 text-primary"></i>Notification Settings
+                            </h6>
+                            <div class="form-check form-switch mb-3 p-3 bg-light rounded">
+                                <input class="form-check-input" type="checkbox" name="receive_email_notifications" 
+                                       id="receive_email_notifications" {% if profile.receive_email_notifications %}checked{% endif %}>
+                                <label class="form-check-label fw-bold" for="receive_email_notifications">
+                                    Email Notifications
+                                </label>
+                                <small class="form-text text-muted d-block mt-1">Receive email updates about your security analyses and account activity</small>
+                            </div>
+                            <div class="form-check form-switch mb-3 p-3 bg-light rounded">
+                                <input class="form-check-input" type="checkbox" name="receive_security_alerts" 
+                                       id="receive_security_alerts" {% if profile.receive_security_alerts %}checked{% endif %}>
+                                <label class="form-check-label fw-bold" for="receive_security_alerts">
+                                    Security Alerts
+                                </label>
+                                <small class="form-text text-muted d-block mt-1">Get immediate alerts for high-risk threats and suspicious activities</small>
+                            </div>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div class="mb-5">
+                            <h6 class="border-bottom pb-2 mb-4 text-dark fw-bold">
+                                <i class="fas fa-shield-alt me-2 text-primary"></i>Security Settings
+                            </h6>
+                            <div class="form-check form-switch mb-3 p-3 bg-light rounded">
+                                <input class="form-check-input" type="checkbox" name="auto_scan_links" 
+                                       id="auto_scan_links" {% if profile.auto_scan_links %}checked{% endif %}>
+                                <label class="form-check-label fw-bold" for="auto_scan_links">
+                                    Auto-scan Links
+                                </label>
+                                <small class="form-text text-muted d-block mt-1">Automatically scan URLs found in analyzed messages for additional security</small>
+                            </div>
+                        </div>
+
+                        <!-- Appearance Settings -->
+                        <div class="mb-5">
+                            <h6 class="border-bottom pb-2 mb-4 text-dark fw-bold">
+                                <i class="fas fa-palette me-2 text-primary"></i>Appearance
+                            </h6>
+                            <div class="form-check form-switch mb-3 p-3 bg-light rounded">
+                                <input class="form-check-input" type="checkbox" name="dark_mode_enabled" 
+                                       id="dark_mode_enabled" {% if profile.dark_mode_enabled %}checked{% endif %}>
+                                <label class="form-check-label fw-bold" for="dark_mode_enabled">
+                                    Dark Mode
+                                </label>
+                                <small class="form-text text-muted d-block mt-1">Enable dark theme for better visibility in low-light conditions</small>
+                            </div>
+                            <div class="form-check form-switch mb-3 p-3 bg-light rounded">
+                                <input class="form-check-input" type="checkbox" name="show_tips" 
+                                       id="show_tips" {% if profile.show_tips %}checked{% endif %}>
+                                <label class="form-check-label fw-bold" for="show_tips">
+                                    Show Security Tips
+                                </label>
+                                <small class="form-text text-muted d-block mt-1">Display helpful security tips and best practices throughout the application</small>
+                            </div>
+                        </div>
+
+                        <!-- Language Settings -->
+                        <div class="mb-4">
+                            <h6 class="border-bottom pb-2 mb-4 text-dark fw-bold">
+                                <i class="fas fa-language me-2 text-primary"></i>Language & Region
+                            </h6>
+                            <div class="p-3 bg-light rounded">
+                                <label for="language" class="form-label fw-bold">Interface Language</label>
+                                <select class="form-select" name="language" id="language">
+                                    <option value="en" {% if profile.language == 'en' %}selected{% endif %}>English</option>
+                                    <option value="es" {% if profile.language == 'es' %}selected{% endif %}>Español (Spanish)</option>
+                                </select>
+                                <small class="form-text text-muted">Choose your preferred language for the interface</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center pt-4 border-top">
+                            <a href="{% url 'phishield:profile' %}" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Back to Profile
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-1"></i>Save Settings
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Account Actions -->
+            <div class="card shadow-sm mt-4 border-warning">
+                <div class="card-header bg-warning bg-opacity-10 border-warning">
+                    <h6 class="mb-0 text-dark fw-bold"><i class="fas fa-exclamation-triangle me-2 text-warning"></i>Account Actions</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <a href="{% url 'phishield:change_password' %}" class="btn btn-warning w-100">
+                                <i class="fas fa-lock me-2"></i>Change Password
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-outline-danger w-100" disabled>
+                                <i class="fas fa-trash me-2"></i>Delete Account
+                            </button>
+                            <small class="text-muted d-block mt-1 text-center">Feature coming soon</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

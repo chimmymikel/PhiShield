@@ -1,0 +1,1289 @@
+{% extends 'phishield/base.html' %}
+{% block title %}Dashboard - PhiShield{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Modern Welcome Header with Gradient -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="welcome-card">
+                <div class="welcome-content">
+                    <div class="welcome-icon-wrapper">
+                        <i class="fas fa-shield-alt welcome-icon"></i>
+                    </div>
+                    <div>
+                        <h1 class="welcome-title">Welcome back, {{ user.username }}!</h1>
+                        <p class="welcome-subtitle">Your personal security command center</p>
+                    </div>
+                </div>
+                <div class="welcome-decoration"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Statistics Cards with Animations -->
+    <div class="row mb-4 g-3">
+        <div class="col-md-4">
+            <div class="stat-card stat-card-primary">
+                <div class="stat-card-glow stat-glow-primary"></div>
+                <div class="stat-icon-wrapper">
+                    <div class="stat-icon stat-icon-primary">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">{{ total_checks }}</div>
+                    <div class="stat-label">Total Checks</div>
+                    <div class="stat-badge stat-badge-success">
+                        <i class="fas fa-chart-line"></i> Active monitoring
+                    </div>
+                </div>
+                <div class="stat-wave"></div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="stat-card stat-card-danger">
+                <div class="stat-card-glow stat-glow-danger"></div>
+                <div class="stat-icon-wrapper">
+                    <div class="stat-icon stat-icon-danger">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">{{ threats_found }}</div>
+                    <div class="stat-label">Threats Blocked</div>
+                    <div class="stat-badge stat-badge-danger">
+                        <i class="fas fa-exclamation-triangle"></i> Protected
+                    </div>
+                </div>
+                <div class="stat-wave"></div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="stat-card stat-card-success">
+                <div class="stat-card-glow stat-glow-success"></div>
+                <div class="stat-icon-wrapper">
+                    <div class="stat-icon stat-icon-success">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number">{{ safe_checks }}</div>
+                    <div class="stat-label">Safe Items</div>
+                    <div class="stat-badge stat-badge-success">
+                        <i class="fas fa-lock"></i> Verified secure
+                    </div>
+                </div>
+                <div class="stat-wave"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions with Modern Cards -->
+    <div class="row mb-4">
+        <div class="col-12 mb-3">
+            <div class="section-header">
+                <div class="section-header-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div>
+                    <h3 class="section-title">Quick Security Tools</h3>
+                    <p class="section-subtitle">Choose your protection method</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-3">
+            <div class="action-card action-card-primary">
+                <div class="action-card-glow"></div>
+                <div class="action-icon-wrapper">
+                    <div class="action-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                </div>
+                <h4 class="action-title">Check URL</h4>
+                <p class="action-description">
+                    Analyze suspicious links and websites for phishing attempts, malware, and security threats instantly.
+                </p>
+                <a href="{% url 'phishield:check_link' %}" class="action-btn action-btn-primary">
+                    <span>Analyze Link</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-3">
+            <div class="action-card action-card-warning">
+                <div class="action-card-glow"></div>
+                <div class="action-icon-wrapper">
+                    <div class="action-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                </div>
+                <h4 class="action-title">Analyze Message</h4>
+                <p class="action-description">
+                    Scan emails, texts, and messages for phishing content, suspicious patterns, and social engineering tactics.
+                </p>
+                <a href="{% url 'phishield:analyze_message' %}" class="action-btn action-btn-warning">
+                    <span>Scan Message</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-3">
+            <div class="action-card action-card-success">
+                <div class="action-card-glow"></div>
+                <div class="action-icon-wrapper">
+                    <div class="action-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                </div>
+                <h4 class="action-title">View History</h4>
+                <p class="action-description">
+                    Review your past security analyses, track patterns, and monitor your complete protection history.
+                </p>
+                <a href="{% url 'phishield:history' %}" class="action-btn action-btn-success">
+                    <span>View History</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity & Insights Section -->
+    <div class="row g-3">
+        <!-- Recent Activity -->
+        <div class="col-lg-8">
+            <div class="modern-card">
+                <div class="modern-card-header">
+                    <div class="modern-card-header-content">
+                        <div class="modern-card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="modern-card-title">Recent Activity</h4>
+                            <p class="modern-card-subtitle">Your latest security scans</p>
+                        </div>
+                    </div>
+                    <a href="{% url 'phishield:history' %}" class="modern-link">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="modern-card-body">
+                    {% if recent_checks %}
+                        <div class="activity-list">
+                            {% for entry in recent_checks %}
+                            <div class="activity-item">
+                                <div class="activity-icon-wrapper">
+                                    <div class="activity-icon activity-icon-{% if entry.type == 'URL' %}primary{% else %}info{% endif %}">
+                                        <i class="fas fa-{% if entry.type == 'URL' %}link{% else %}envelope{% endif %}"></i>
+                                    </div>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <div>
+                                            <h6 class="activity-title">{{ entry.type }} Analysis</h6>
+                                            <p class="activity-text">{{ entry.content|truncatechars:80 }}</p>
+                                        </div>
+                                        <span class="risk-badge-modern risk-{{ entry.risk_level }}">
+                                            <i class="fas fa-{% if entry.risk_level == 'high' %}exclamation-triangle{% elif entry.risk_level == 'medium' %}exclamation-circle{% else %}check-circle{% endif %}"></i>
+                                            {{ entry.risk_level|upper }}
+                                        </span>
+                                    </div>
+                                    <div class="activity-meta">
+                                        <span><i class="fas fa-calendar"></i> {{ entry.date_checked|timesince }} ago</span>
+                                        <span><i class="fas fa-{% if entry.type == 'URL' %}globe{% else %}comment{% endif %}"></i> {{ entry.type }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="empty-state">
+                            <div class="empty-icon">
+                                <i class="fas fa-inbox"></i>
+                            </div>
+                            <h5 class="empty-title">No Activity Yet</h5>
+                            <p class="empty-text">Start protecting yourself by analyzing your first link or message</p>
+                            <div class="empty-actions">
+                                <a href="{% url 'phishield:check_link' %}" class="empty-btn empty-btn-primary">
+                                    <i class="fas fa-link"></i> Check Link
+                                </a>
+                                <a href="{% url 'phishield:analyze_message' %}" class="empty-btn empty-btn-warning">
+                                    <i class="fas fa-envelope"></i> Analyze Message
+                                </a>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Insights -->
+        <div class="col-lg-4">
+            <!-- Security Tip -->
+            <div class="modern-card mb-3">
+                <div class="modern-card-header">
+                    <div class="modern-card-header-content">
+                        <div class="modern-card-icon modern-card-icon-warning">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h5 class="modern-card-title">Security Tip</h5>
+                            <p class="modern-card-subtitle">Daily wisdom</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card-body">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="tip-text">{{ tip }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="modern-card">
+                <div class="modern-card-header">
+                    <div class="modern-card-header-content">
+                        <div class="modern-card-icon modern-card-icon-info">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div>
+                            <h5 class="modern-card-title">Overview</h5>
+                            <p class="modern-card-subtitle">Your security stats</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card-body">
+                    <div class="stats-grid">
+                        <div class="stats-item stats-item-success">
+                            <div class="stats-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="stats-value">
+                                {% if total_checks > 0 %}
+                                    {{ safe_checks|floatformat:0 }}%
+                                {% else %}
+                                    0%
+                                {% endif %}
+                            </div>
+                            <div class="stats-label">Safe Rate</div>
+                        </div>
+                        <div class="stats-item stats-item-danger">
+                            <div class="stats-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="stats-value">
+                                {% if total_checks > 0 %}
+                                    {{ threats_found|floatformat:0 }}%
+                                {% else %}
+                                    0%
+                                {% endif %}
+                            </div>
+                            <div class="stats-label">Threat Rate</div>
+                        </div>
+                    </div>
+                    <a href="{% url 'phishield:profile' %}" class="stats-link">
+                        <i class="fas fa-chart-line"></i> View Detailed Analytics
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modern Color Palette */
+:root {
+    --primary: #667eea;
+    --primary-dark: #5568d3;
+    --primary-light: #e0e7ff;
+    --danger: #f56565;
+    --danger-light: #fed7d7;
+    --success: #48bb78;
+    --success-light: #c6f6d5;
+    --warning: #ed8936;
+    --warning-light: #feebc8;
+    --info: #4299e1;
+    --dark: #2d3748;
+    --light: #f7fafc;
+    --gray: #718096;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Container Fix */
+.dashboard-container {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px); /* Adjust based on your header/footer height */
+}
+
+/* Welcome Card */
+.welcome-card {
+    background: linear-gradient(135deg, var(--primary) 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-icon-wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-icon {
+    font-size: 36px;
+    color: white;
+}
+
+.welcome-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.welcome-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin: 8px 0 0;
+}
+
+.welcome-decoration {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Stat Cards - Adjusted for better spacing */
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+}
+
+.stat-card:hover .stat-card-glow {
+    opacity: 1;
+}
+
+.stat-glow-primary {
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+}
+
+.stat-glow-danger {
+    background: radial-gradient(circle, rgba(245, 101, 101, 0.1) 0%, transparent 70%);
+}
+
+.stat-glow-success {
+    background: radial-gradient(circle, rgba(72, 187, 120, 0.1) 0%, transparent 70%);
+}
+
+.stat-icon-wrapper {
+    margin-bottom: 16px;
+}
+
+.stat-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+    color: var(--primary);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.stat-icon-primary {
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+    color: var(--primary);
+}
+
+.stat-icon-danger {
+    background: linear-gradient(135deg, var(--danger-light) 0%, white 100%);
+    color: var(--danger);
+}
+
+.stat-icon-success {
+    background: linear-gradient(135deg, var(--success-light) 0%, white 100%);
+    color: var(--success);
+}
+
+.stat-content {
+    position: relative;
+    z-index: 1;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--gray);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stat-badge-success {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.stat-badge-danger {
+    background: var(--danger-light);
+    color: var(--danger);
+}
+
+.stat-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--info) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover .stat-wave {
+    transform: scaleX(1);
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.section-header-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--warning) 0%, #f6ad55 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(237, 137, 54, 0.3);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    color: var(--gray);
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+}
+
+/* Action Cards - Adjusted spacing */
+.action-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    margin-bottom: 0;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.action-card-primary:hover {
+    border-color: var(--primary);
+}
+
+.action-card-warning:hover {
+    border-color: var(--warning);
+}
+
+.action-card-success:hover {
+    border-color: var(--success);
+}
+
+.action-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+}
+
+.action-card-primary:hover .action-card-glow {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+}
+
+.action-card-warning:hover .action-card-glow {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(237, 137, 54, 0.05) 0%, transparent 100%);
+}
+
+.action-card-success:hover .action-card-glow {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(72, 187, 120, 0.05) 0%, transparent 100%);
+}
+
+.action-icon-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.action-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: all 0.3s;
+}
+
+.action-card-primary .action-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, #5568d3 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.action-card-warning .action-icon {
+    background: linear-gradient(135deg, var(--warning) 0%, #dd6b20 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(237, 137, 54, 0.3);
+}
+
+.action-card-success .action-icon {
+    background: linear-gradient(135deg, var(--success) 0%, #38a169 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(72, 187, 120, 0.3);
+}
+
+.action-card:hover .action-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.action-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.action-description {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    font-size: 0.9rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.action-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.action-btn span,
+.action-btn i {
+    position: relative;
+    z-index: 1;
+}
+
+.action-btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, #5568d3 100%);
+    color: white;
+}
+
+.action-btn-primary::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.action-btn-warning {
+    background: linear-gradient(135deg, var(--warning) 0%, #dd6b20 100%);
+    color: white;
+}
+
+.action-btn-warning::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.action-btn-success {
+    background: linear-gradient(135deg, var(--success) 0%, #38a169 100%);
+    color: white;
+}
+
+.action-btn-success::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Modern Card */
+.modern-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+    margin-bottom: 1rem;
+}
+
+.modern-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-card-header {
+    padding: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.02) 0%, transparent 100%);
+}
+
+.modern-card-header-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.modern-card-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary) 0%, #5568d3 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+.modern-card-icon-warning {
+    background: linear-gradient(135deg, var(--warning) 0%, #dd6b20 100%);
+    box-shadow: 0 6px 15px rgba(237, 137, 54, 0.3);
+}
+
+.modern-card-icon-info {
+    background: linear-gradient(135deg, var(--info) 0%, #3182ce 100%);
+    box-shadow: 0 6px 15px rgba(66, 153, 225, 0.3);
+}
+
+.modern-card-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 0;
+}
+
+.modern-card-subtitle {
+    color: var(--gray);
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+}
+
+.modern-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: gap 0.3s;
+}
+
+.modern-link:hover {
+    gap: 12px;
+    color: var(--primary-dark);
+}
+
+.modern-card-body {
+    padding: 24px;
+}
+
+/* Activity List */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 14px;
+    padding: 18px;
+    background: var(--light);
+    border-radius: 14px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.activity-item:hover {
+    background: white;
+    border-color: var(--primary-light);
+    transform: translateX(4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.activity-icon-wrapper {
+    flex-shrink: 0;
+}
+
+.activity-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.activity-icon-primary {
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+    color: var(--primary);
+}
+
+.activity-icon-info {
+    background: linear-gradient(135deg, #bee3f8 0%, white 100%);
+    color: var(--info);
+}
+
+.activity-content {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.activity-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0 0 6px;
+}
+
+.activity-text {
+    color: var(--gray);
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.activity-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.activity-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Risk Badge Modern */
+.risk-badge-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.risk-safe {
+    background: linear-gradient(135deg, var(--success-light) 0%, #9ae6b4 100%);
+    color: var(--success);
+    box-shadow: 0 4px 10px rgba(72, 187, 120, 0.2);
+}
+
+.risk-suspicious {
+    background: linear-gradient(135deg, var(--warning-light) 0%, #fbd38d 100%);
+    color: var(--warning);
+    box-shadow: 0 4px 10px rgba(237, 137, 54, 0.2);
+}
+
+.risk-dangerous {
+    background: linear-gradient(135deg, var(--danger-light) 0%, #fc8181 100%);
+    color: var(--danger);
+    box-shadow: 0 4px 10px rgba(245, 101, 101, 0.2);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--light) 0%, white 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--gray);
+}
+
+.empty-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.empty-text {
+    color: var(--gray);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.empty-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.empty-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.empty-btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, #5568d3 100%);
+    color: white;
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+.empty-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.empty-btn-warning {
+    background: linear-gradient(135deg, var(--warning) 0%, #dd6b20 100%);
+    color: white;
+    box-shadow: 0 6px 15px rgba(237, 137, 54, 0.3);
+}
+
+.empty-btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(237, 137, 54, 0.4);
+    color: white;
+}
+
+/* Tip Card */
+.tip-card {
+    background: linear-gradient(135deg, var(--warning-light) 0%, #fef5e7 100%);
+    border-radius: 14px;
+    padding: 20px;
+    border-left: 4px solid var(--warning);
+}
+
+.tip-icon {
+    font-size: 20px;
+    color: var(--warning);
+    margin-bottom: 10px;
+}
+
+.tip-text {
+    color: var(--dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.stats-item {
+    background: var(--light);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.stats-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stats-item-success {
+    background: linear-gradient(135deg, var(--success-light) 0%, #f0fff4 100%);
+}
+
+.stats-item-success:hover {
+    border-color: var(--success);
+}
+
+.stats-item-danger {
+    background: linear-gradient(135deg, var(--danger-light) 0%, #fff5f5 100%);
+}
+
+.stats-item-danger:hover {
+    border-color: var(--danger);
+}
+
+.stats-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stats-item-success .stats-icon {
+    color: var(--success);
+}
+
+.stats-item-danger .stats-icon {
+    color: var(--danger);
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.stats-item-success .stats-value {
+    color: var(--success);
+}
+
+.stats-item-danger .stats-value {
+    color: var(--danger);
+}
+
+.stats-label {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.stats-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: white;
+    border: 2px solid var(--primary-light);
+    border-radius: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.stats-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 0.5rem;
+    }
+    
+    .welcome-card {
+        padding: 24px 20px;
+    }
+    
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .welcome-title {
+        font-size: 1.75rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .action-card {
+        padding: 24px;
+    }
+    
+    .modern-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .activity-item {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .activity-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .risk-badge-modern {
+        align-self: flex-start;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .empty-actions {
+        flex-direction: column;
+    }
+    
+    .empty-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card,
+.action-card,
+.modern-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.action-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.action-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.action-card:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary) 0%, #5568d3 100%);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+</style>
+{% endblock %}

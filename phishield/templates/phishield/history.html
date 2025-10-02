@@ -1,0 +1,673 @@
+{% extends 'phishield/base.html' %}
+{% block title %}History - PhiShield{% endblock %}
+
+{% block content %}
+<div class="history-container">
+    <!-- Modern Header -->
+    <div class="history-header mb-4">
+        <div class="header-content">
+            <div class="header-icon">
+                <i class="fas fa-history"></i>
+            </div>
+            <div>
+                <h1 class="header-title">Security History</h1>
+                <p class="header-subtitle">Complete record of your security scans and analyses</p>
+            </div>
+        </div>
+        <div class="header-stats">
+            <div class="stat-badge">
+                <i class="fas fa-shield-alt"></i>
+                {{ history|length }} Total Scans
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters and Search -->
+    <div class="history-filters mb-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="historySearch" placeholder="Search through your history...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="filter-select" id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="URL">URL Checks</option>
+                    <option value="Message">Message Analysis</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="filter-select" id="riskFilter">
+                    <option value="">All Risk Levels</option>
+                    <option value="safe">Safe</option>
+                    <option value="suspicious">Suspicious</option>
+                    <option value="dangerous">Dangerous</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    {% if history %}
+    <!-- Modern History Cards -->
+    <div class="history-grid">
+        {% for entry in history %}
+        <div class="history-card" data-type="{{ entry.type }}" data-risk="{{ entry.risk_level }}">
+            <div class="card-header">
+                <div class="card-type">
+                    <div class="type-icon type-{{ entry.type|lower }}">
+                        <i class="fas fa-{% if entry.type == 'URL' %}link{% else %}envelope{% endif %}"></i>
+                    </div>
+                    <span class="type-text">{{ entry.type }}</span>
+                </div>
+                <div class="card-date">
+                    <i class="fas fa-calendar"></i>
+                    {{ entry.date_checked|date:"M d, Y" }}
+                </div>
+            </div>
+            
+            <div class="card-content">
+                <p class="content-preview">{{ entry.content|truncatechars:120 }}</p>
+            </div>
+            
+            <div class="card-flags">
+                {% if entry.flags %}
+                <div class="flags-container">
+                    <i class="fas fa-flag"></i>
+                    <span class="flags-text">{{ entry.flags|truncatechars:80 }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="card-footer">
+                <div class="risk-indicator">
+                    <span class="risk-badge-modern risk-{{ entry.risk_level }}">
+                        <i class="fas fa-{% if entry.risk_level == 'dangerous' %}exclamation-triangle{% elif entry.risk_level == 'suspicious' %}exclamation-circle{% else %}check-circle{% endif %}"></i>
+                        {{ entry.risk_level|upper }}
+                    </span>
+                </div>
+                <div class="time-indicator">
+                    <i class="fas fa-clock"></i>
+                    {{ entry.date_checked|timesince }} ago
+                </div>
+            </div>
+            
+            <div class="card-hover-effect"></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Load More Button -->
+    <div class="load-more-container">
+        <button class="load-more-btn">
+            <i class="fas fa-sync"></i>
+            Load More History
+        </button>
+    </div>
+
+    {% else %}
+    <!-- Empty State -->
+    <div class="empty-history-state">
+        <div class="empty-icon">
+            <i class="fas fa-history"></i>
+        </div>
+        <h3 class="empty-title">No Security History Yet</h3>
+        <p class="empty-text">Start building your security profile by analyzing links and messages</p>
+        <div class="empty-actions">
+            <a href="{% url 'phishield:check_link' %}" class="empty-btn primary">
+                <i class="fas fa-link"></i>
+                Check Your First Link
+            </a>
+            <a href="{% url 'phishield:analyze_message' %}" class="empty-btn secondary">
+                <i class="fas fa-envelope"></i>
+                Analyze a Message
+            </a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+/* Modern Color Palette */
+:root {
+    --primary: #667eea;
+    --primary-dark: #5568d3;
+    --primary-light: #e0e7ff;
+    --danger: #f56565;
+    --danger-light: #fed7d7;
+    --success: #48bb78;
+    --success-light: #c6f6d5;
+    --warning: #ed8936;
+    --warning-light: #feebc8;
+    --info: #4299e1;
+    --dark: #2d3748;
+    --light: #f7fafc;
+    --gray: #718096;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.history-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.history-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.header-subtitle {
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.header-stats .stat-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Filters Section */
+.history-filters {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 2px solid var(--light);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.filter-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--light);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* History Grid */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.history-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.history-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-light);
+}
+
+.card-hover-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+    transition: left 0.6s;
+}
+
+.history-card:hover .card-hover-effect {
+    left: 100%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-type {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.type-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+}
+
+.type-url {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.type-message {
+    background: linear-gradient(135deg, var(--info) 0%, #3182ce 100%);
+}
+
+.type-text {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-content {
+    margin-bottom: 1rem;
+}
+
+.content-preview {
+    color: var(--dark);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.card-flags {
+    margin-bottom: 1rem;
+}
+
+.flags-container {
+    background: var(--light);
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.flags-container i {
+    color: var(--warning);
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.flags-text {
+    color: var(--gray);
+    line-height: 1.4;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.risk-badge-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.risk-safe {
+    background: linear-gradient(135deg, var(--success-light) 0%, #9ae6b4 100%);
+    color: var(--success);
+    box-shadow: 0 4px 10px rgba(72, 187, 120, 0.2);
+}
+
+.risk-suspicious {
+    background: linear-gradient(135deg, var(--warning-light) 0%, #fbd38d 100%);
+    color: var(--warning);
+    box-shadow: 0 4px 10px rgba(237, 137, 54, 0.2);
+}
+
+.risk-dangerous {
+    background: linear-gradient(135deg, var(--danger-light) 0%, #fc8181 100%);
+    color: var(--danger);
+    box-shadow: 0 4px 10px rgba(245, 101, 101, 0.2);
+}
+
+.time-indicator {
+    font-size: 0.8rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.load-more-btn {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.load-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Empty State */
+.empty-history-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.empty-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    background: linear-gradient(135deg, var(--light) 0%, white 100%);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: var(--gray);
+}
+
+.empty-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.empty-text {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.empty-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.empty-btn.primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+.empty-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.empty-btn.secondary {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary-light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empty-btn.secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.2);
+    background: var(--primary-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .history-container {
+        padding: 1rem;
+    }
+    
+    .history-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .empty-actions {
+        flex-direction: column;
+    }
+    
+    .empty-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.history-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.history-card:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.history-card:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+</style>
+
+<script>
+// Simple filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('historySearch');
+    const typeFilter = document.getElementById('typeFilter');
+    const riskFilter = document.getElementById('riskFilter');
+    const historyCards = document.querySelectorAll('.history-card');
+    
+    function filterHistory() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedType = typeFilter.value;
+        const selectedRisk = riskFilter.value;
+        
+        historyCards.forEach(card => {
+            const content = card.querySelector('.content-preview').textContent.toLowerCase();
+            const type = card.getAttribute('data-type');
+            const risk = card.getAttribute('data-risk');
+            
+            const matchesSearch = content.includes(searchTerm);
+            const matchesType = !selectedType || type === selectedType;
+            const matchesRisk = !selectedRisk || risk === selectedRisk;
+            
+            if (matchesSearch && matchesType && matchesRisk) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    searchInput.addEventListener('input', filterHistory);
+    typeFilter.addEventListener('change', filterHistory);
+    riskFilter.addEventListener('change', filterHistory);
+    
+    // Load more functionality (placeholder)
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-sync"></i> Load More History';
+                alert('More history items would be loaded here in a real implementation!');
+            }, 1000);
+        });
+    }
+});
+</script>
+{% endblock %}
