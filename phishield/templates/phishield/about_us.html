@@ -88,47 +88,87 @@
     </div>
 
     <!-- Development Team Section -->
-    <div class="row mt-5">
-        <div class="col-12">
-            <h3><i class="fas fa-users"></i> Development Team</h3>
-            
-            <h5 class="mt-4 text-primary">Developers</h5>
-            <div class="row">
-                {% for dev in developers %}
-                <div class="col-md-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <div class="mb-3">
-                                <i class="fas fa-user-circle fa-3x text-secondary"></i>
+   <section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Development Team</h2>
+        <div class="row">
+            <!-- Developers -->
+            <div class="col-md-12">
+                <h5 class="mt-4 text-primary">Developers</h5>
+                <div class="row">
+                    <!-- Lead Developer -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-circle fa-3x"></i>
+                                <h5 class="card-title">Michelle Marie P. Habon</h5>
+                                <p class="card-text">Lead Developer</p>
                             </div>
-                            <h6 class="card-title">{{ dev.name }}</h6>
-                            <p class="card-text text-muted small">{{ dev.role }}</p>
-                            <small class="text-primary">{{ dev.email }}</small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-circle fa-3x"></i>
+                                <h5 class="card-title">Gave C. Hontiveros</h5>
+                                <p class="card-text">Developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-circle fa-3x"></i>
+                                <h5 class="card-title">Adrian Ace V. Hernandez</h5>
+                                <p class="card-text">Developer</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
 
-            <h5 class="mt-4 text-success">Project Management</h5>
-            <div class="row">
-                {% for pm in project_management %}
-                <div class="col-md-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <div class="mb-3">
-                                <i class="fas fa-briefcase fa-3x text-success"></i>
+            <!-- Project Management -->
+            <div class="col-md-12 mt-4">
+                <h3><i class="fas fa-briefcase"></i> Project Management</h3>
+                <div class="row">
+                    <!-- Product Owner -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-tie fa-3x"></i>
+                                <h5 class="card-title">Jac Gary Canete</h5>
+                                <p class="card-text">Product Owner</p>
                             </div>
-                            <h6 class="card-title">{{ pm.name }}</h6>
-                            <p class="card-text text-muted small">{{ pm.role }}</p>
-                            <small class="text-primary">{{ pm.email }}</small>
+                        </div>
+                    </div>
+                    <!-- Business Analyst -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-tie fa-3x"></i>
+                                <h5 class="card-title">Joseph Harry Butihen</h5>
+                                <p class="card-text">Business Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Scrum Master -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-tie fa-3x"></i>
+                                <h5 class="card-title">Reenah Mae Campilanan</h5>
+                                <p class="card-text">Scrum Master</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>
+</section>
+
 
     <div class="alert alert-info mt-4">
         <i class="fas fa-lightbulb"></i> 
