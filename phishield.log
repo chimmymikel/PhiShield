@@ -421,3 +421,99 @@ INFO 2025-10-02 13:01:22,842 views Message analysis completed - Risk: suspicious
 [2025-10-02 18:05:16,765] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
 [2025-10-02 18:05:16,770] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
 [2025-10-02 18:05:18,772] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-03 11:30:37,504] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 11:30:39,974] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-03 11:30:40,334] INFO django.server - - Broken pipe from ('127.0.0.1', 60730)
+[2025-10-03 11:30:41,988] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-03 11:30:43,389] INFO django.server - "POST /login/ HTTP/1.1" 200 12339
+[2025-10-03 11:30:45,113] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-03 11:31:19,099] INFO phishield - User registered and auto-verified: join
+[2025-10-03 11:31:19,109] INFO django.server - "POST /register/ HTTP/1.1" 302 0
+[2025-10-03 11:31:19,120] INFO phishield - Dashboard accessed by: join
+[2025-10-03 11:31:19,137] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 42384
+[2025-10-03 11:31:25,446] INFO phishield - About Us page accessed
+[2025-10-03 11:31:25,460] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 11:32:44,201] INFO phishield - History accessed by: join
+[2025-10-03 11:32:44,215] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 11:32:45,751] INFO phishield - About Us page accessed
+[2025-10-03 11:32:45,766] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 11:32:45,929] INFO django.server - - Broken pipe from ('127.0.0.1', 60732)
+[2025-10-03 11:32:46,969] INFO phishield - About Us page accessed
+[2025-10-03 11:32:46,983] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 11:32:48,660] INFO django.server - "GET /contact/ HTTP/1.1" 200 16815
+[2025-10-03 11:32:58,672] INFO phishield - About Us page accessed
+[2025-10-03 11:32:58,686] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 11:32:58,838] INFO django.server - - Broken pipe from ('127.0.0.1', 60743)
+[2025-10-03 11:33:00,563] INFO phishield - History accessed by: join
+[2025-10-03 11:33:00,574] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 11:33:00,731] INFO django.server - - Broken pipe from ('127.0.0.1', 60744)
+[2025-10-03 11:33:01,925] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 11:33:02,776] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 11:33:03,884] INFO phishield - Dashboard accessed by: join
+[2025-10-03 11:33:03,897] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41700
+[2025-10-03 11:33:12,936] INFO phishield - About Us page accessed
+[2025-10-03 11:33:12,951] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 11:33:13,130] INFO django.server - - Broken pipe from ('127.0.0.1', 60745)
+[2025-10-03 11:33:40,205] INFO phishield - About Us page accessed
+[2025-10-03 11:33:40,220] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 11:33:40,372] INFO django.server - - Broken pipe from ('127.0.0.1', 60749)
+[2025-10-03 11:41:08,079] INFO phishield - About Us page accessed
+[2025-10-03 11:41:08,101] INFO django.server - "GET /about/ HTTP/1.1" 200 18902
+[2025-10-03 11:41:08,284] INFO django.server - - Broken pipe from ('127.0.0.1', 60923)
+[2025-10-03 11:41:25,915] INFO phishield - About Us page accessed
+[2025-10-03 11:41:25,931] INFO django.server - "GET /about/ HTTP/1.1" 200 18854
+[2025-10-03 11:41:26,086] INFO django.server - - Broken pipe from ('127.0.0.1', 60924)
+[2025-10-03 11:42:00,114] INFO phishield - About Us page accessed
+[2025-10-03 11:42:00,130] INFO django.server - "GET /about/ HTTP/1.1" 200 18901
+[2025-10-03 11:42:00,294] INFO django.server - - Broken pipe from ('127.0.0.1', 60929)
+[2025-10-03 11:42:15,550] INFO phishield - About Us page accessed
+[2025-10-03 11:42:15,566] INFO django.server - "GET /about/ HTTP/1.1" 200 18899
+[2025-10-03 11:42:15,724] INFO django.server - - Broken pipe from ('127.0.0.1', 60935)
+[2025-10-03 11:43:37,583] INFO phishield - About Us page accessed
+[2025-10-03 11:43:37,599] INFO django.server - "GET /about/ HTTP/1.1" 200 18789
+[2025-10-03 11:43:37,763] INFO django.server - - Broken pipe from ('127.0.0.1', 60939)
+[2025-10-03 11:45:14,339] INFO phishield - About Us page accessed
+[2025-10-03 11:45:14,355] INFO django.server - "GET /about/ HTTP/1.1" 200 18786
+[2025-10-03 11:45:14,523] INFO django.server - - Broken pipe from ('127.0.0.1', 60948)
+[2025-10-03 13:09:23,596] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 13:09:25,548] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:09:25,563] INFO phishield - Dashboard accessed by: join
+[2025-10-03 13:09:25,592] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41700
+[2025-10-03 13:09:28,296] INFO phishield - About Us page accessed
+[2025-10-03 13:09:28,311] INFO django.server - "GET /about/ HTTP/1.1" 200 18786
+[2025-10-03 13:24:37,813] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 13:24:44,407] INFO django.server - "GET /admin HTTP/1.1" 301 0
+[2025-10-03 13:24:44,416] INFO django.server - "GET /admin/ HTTP/1.1" 302 0
+[2025-10-03 13:24:44,440] INFO django.server - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+[2025-10-03 13:24:44,557] INFO django.server - "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[2025-10-03 13:24:44,576] INFO django.server - "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[2025-10-03 13:24:44,579] INFO django.server - "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[2025-10-03 13:24:44,579] INFO django.server - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[2025-10-03 13:24:44,585] INFO django.server - "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[2025-10-03 13:24:44,585] INFO django.server - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[2025-10-03 13:24:44,758] INFO django.server - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2025-10-03 13:24:44,786] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-03 13:24:50,788] INFO django.server - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2025-10-03 13:24:50,809] INFO django.server - "GET /admin/ HTTP/1.1" 200 8588
+[2025-10-03 13:24:50,824] INFO django.server - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[2025-10-03 13:24:50,893] INFO django.server - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2025-10-03 13:24:50,893] INFO django.server - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2025-10-03 13:24:52,760] INFO django.server - "GET /admin/phishield/userprofile/ HTTP/1.1" 200 13752
+[2025-10-03 13:24:52,776] INFO django.server - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+[2025-10-03 13:24:52,776] INFO django.server - "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[2025-10-03 13:24:52,777] INFO django.server - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2025-10-03 13:24:52,778] INFO django.server - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[2025-10-03 13:24:52,781] INFO django.server - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2025-10-03 13:24:52,781] INFO django.server - "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[2025-10-03 13:24:52,782] INFO django.server - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2025-10-03 13:24:52,784] INFO django.server - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[2025-10-03 13:24:52,784] INFO django.server - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[2025-10-03 13:24:52,785] INFO django.server - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[2025-10-03 13:24:52,792] INFO django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-10-03 13:24:52,834] INFO django.server - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[2025-10-03 13:24:52,851] INFO django.server - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2025-10-03 13:25:48,911] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:25:48,953] INFO phishield - Dashboard accessed by: join
+[2025-10-03 13:25:48,971] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41712
+[2025-10-03 13:25:53,504] INFO phishield - About Us page accessed
+[2025-10-03 13:25:53,518] INFO django.server - "GET /about/ HTTP/1.1" 200 18786
