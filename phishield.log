@@ -421,3 +421,657 @@ INFO 2025-10-02 13:01:22,842 views Message analysis completed - Risk: suspicious
 [2025-10-02 18:05:16,765] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
 [2025-10-02 18:05:16,770] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
 [2025-10-02 18:05:18,772] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-03 09:09:09,316] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 09:09:40,196] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-03 09:09:40,626] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-03 09:09:44,557] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-03 09:09:47,526] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-03 09:09:50,928] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-03 09:10:21,108] INFO django.server - "POST /register/ HTTP/1.1" 200 17380
+[2025-10-03 09:10:41,752] INFO django.server - "POST /register/ HTTP/1.1" 200 17348
+[2025-10-03 09:10:53,473] INFO phishield - User registered and auto-verified: gave
+[2025-10-03 09:10:53,480] INFO django.server - "POST /register/ HTTP/1.1" 302 0
+[2025-10-03 09:10:53,486] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 09:10:53,496] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 42404
+[2025-10-03 09:11:19,435] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 09:11:21,132] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 09:11:23,312] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 09:11:23,321] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 09:11:30,501] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 09:11:33,755] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 09:11:35,669] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 09:11:36,489] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 09:11:36,498] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 09:11:38,428] INFO django.server - "GET /contact/ HTTP/1.1" 200 16815
+[2025-10-03 09:11:40,843] INFO phishield - Profile accessed by: gave
+[2025-10-03 09:11:40,858] INFO django.server - "GET /profile/ HTTP/1.1" 200 18720
+[2025-10-03 09:11:53,144] INFO django.server - "GET /contact/ HTTP/1.1" 200 16815
+[2025-10-03 09:11:53,727] INFO phishield - About Us page accessed
+[2025-10-03 09:11:53,739] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 09:11:54,330] INFO phishield - History accessed by: gave
+[2025-10-03 09:11:54,337] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 09:11:54,925] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 09:11:55,954] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 09:11:57,158] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 09:11:57,167] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 09:12:02,362] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 09:12:02,371] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41716
+[2025-10-03 09:12:10,361] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 09:12:11,008] INFO phishield - History accessed by: gave
+[2025-10-03 09:12:11,017] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 09:12:11,552] INFO phishield - About Us page accessed
+[2025-10-03 09:12:11,563] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 09:52:21,080] INFO django.server - "GET /contact/ HTTP/1.1" 200 16815
+[2025-10-03 09:52:22,037] INFO phishield - About Us page accessed
+[2025-10-03 09:52:22,049] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 09:52:48,890] INFO phishield - About Us page accessed
+[2025-10-03 09:52:48,904] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 09:52:49,723] INFO phishield - History accessed by: gave
+[2025-10-03 09:52:49,733] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 11:25:05,398] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 11:25:07,259] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 11:25:07,266] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 11:25:07,279] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41727
+[2025-10-03 11:25:14,512] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 11:25:14,519] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41712
+[2025-10-03 11:30:09,500] INFO phishield - About Us page accessed
+[2025-10-03 11:30:09,519] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 13:21:08,829] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:21:09,196] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41729
+[2025-10-03 13:21:13,698] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 13:21:15,443] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:21:15,518] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41700
+[2025-10-03 13:21:15,915] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 13:21:16,364] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:21:16,424] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41729
+[2025-10-03 13:21:18,832] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:21:18,839] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41720
+[2025-10-03 13:21:19,233] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 13:21:19,509] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:21:19,518] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41729
+[2025-10-03 13:21:25,518] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 13:21:25,776] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 13:21:26,926] INFO phishield - History accessed by: gave
+[2025-10-03 13:21:26,934] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 13:21:27,317] INFO phishield - About Us page accessed
+[2025-10-03 13:21:27,325] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 13:21:27,898] INFO django.server - "GET /contact/ HTTP/1.1" 200 16815
+[2025-10-03 13:21:28,600] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:21:29,052] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41712
+[2025-10-03 13:32:33,789] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:32:33,796] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:32:33,805] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41764
+[2025-10-03 13:32:33,865] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:35,291] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:32:35,301] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41747
+[2025-10-03 13:32:35,326] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:35,973] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11765
+[2025-10-03 13:32:36,004] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:36,798] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11821
+[2025-10-03 13:32:36,827] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:37,711] INFO phishield - History accessed by: gave
+[2025-10-03 13:32:37,721] INFO django.server - "GET /history/ HTTP/1.1" 200 25047
+[2025-10-03 13:32:37,752] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:38,281] INFO phishield - About Us page accessed
+[2025-10-03 13:32:38,292] INFO django.server - "GET /about/ HTTP/1.1" 200 18901
+[2025-10-03 13:32:38,326] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:38,828] INFO django.server - "GET /contact/ HTTP/1.1" 200 16850
+[2025-10-03 13:32:38,859] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:32:40,580] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:32:40,587] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:32:40,593] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41753
+[2025-10-03 13:32:40,623] WARNING django.server - "GET /app_name/static/app_name/images/background.jpg HTTP/1.1" 404 8453
+[2025-10-03 13:33:56,089] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:33:56,099] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41749
+[2025-10-03 13:33:56,124] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:33:58,629] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:33:58,636] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41755
+[2025-10-03 13:33:58,660] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:33:59,509] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:33:59,514] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:33:59,521] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41764
+[2025-10-03 13:33:59,549] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:35:20,627] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:35:20,635] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41749
+[2025-10-03 13:35:20,661] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:35:21,340] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:35:21,350] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41749
+[2025-10-03 13:35:21,379] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:35:21,523] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:35:21,534] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41755
+[2025-10-03 13:35:21,564] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:35:51,303] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 13:40:13,537] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:40:13,544] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:40:13,558] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41749
+[2025-10-03 13:40:13,613] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:40:16,798] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:40:16,808] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41766
+[2025-10-03 13:40:16,835] WARNING django.server - "GET /PhiShield/static/phishield/images/background.jpg HTTP/1.1" 404 8459
+[2025-10-03 13:40:33,261] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:40:33,273] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 13:40:47,395] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:40:47,404] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41700
+[2025-10-03 13:51:46,182] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:51:46,205] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41772
+[2025-10-03 13:51:46,236] WARNING django.server - "GET /phishield/images/background.jpg HTTP/1.1" 404 8408
+[2025-10-03 13:51:46,986] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:51:46,996] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41772
+[2025-10-03 13:51:47,019] WARNING django.server - "GET /phishield/images/background.jpg HTTP/1.1" 404 8408
+[2025-10-03 13:52:02,187] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:52:02,199] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 13:52:23,725] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:52:23,735] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41716
+[2025-10-03 13:52:24,759] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-03 13:52:24,765] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:52:24,771] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41727
+[2025-10-03 13:52:26,041] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:52:26,235] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41700
+[2025-10-03 13:52:26,390] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-03 13:52:26,990] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-03 13:52:27,480] INFO phishield - History accessed by: gave
+[2025-10-03 13:52:27,489] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 13:52:27,903] INFO phishield - About Us page accessed
+[2025-10-03 13:52:27,916] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 13:52:29,376] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:52:29,385] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41729
+[2025-10-03 13:59:35,684] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:59:35,762] ERROR django.server - "GET /dashboard/ HTTP/1.1" 500 207236
+[2025-10-03 13:59:36,518] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 13:59:36,546] ERROR django.server - "GET /dashboard/ HTTP/1.1" 500 207260
+[2025-10-03 14:04:35,159] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 14:04:48,281] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:04:48,317] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 14:04:52,867] INFO django.server - "GET /contact/ HTTP/1.1" 200 16815
+[2025-10-03 14:04:53,994] INFO phishield - History accessed by: gave
+[2025-10-03 14:04:54,004] INFO django.server - "GET /history/ HTTP/1.1" 200 25012
+[2025-10-03 14:04:54,372] INFO phishield - About Us page accessed
+[2025-10-03 14:04:54,385] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 14:08:20,924] INFO django.server - "GET /admin/ HTTP/1.1" 302 0
+[2025-10-03 14:08:20,954] INFO django.server - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3690
+[2025-10-03 14:08:21,366] INFO django.server - "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[2025-10-03 14:08:21,536] INFO django.server - "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[2025-10-03 14:08:21,605] INFO django.server - "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[2025-10-03 14:08:21,621] INFO django.server - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[2025-10-03 14:08:21,625] INFO django.server - "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[2025-10-03 14:08:21,625] INFO django.server - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2025-10-03 14:08:21,627] INFO django.server - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[2025-10-03 14:08:56,013] INFO phishield - About Us page accessed
+[2025-10-03 14:08:56,024] INFO django.server - "GET /about/ HTTP/1.1" 200 18866
+[2025-10-03 14:08:59,098] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
+[2025-10-03 14:08:59,103] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-03 14:09:17,070] INFO django.server - "POST /login/ HTTP/1.1" 302 0
+[2025-10-03 14:09:17,078] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:09:17,084] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41729
+[2025-10-03 14:09:19,945] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
+[2025-10-03 14:09:19,950] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-03 14:09:23,679] INFO django.server - "POST /login/ HTTP/1.1" 200 12504
+[2025-10-03 14:09:25,102] INFO django.server - "GET /register/ HTTP/1.1" 200 17061
+[2025-10-03 14:09:26,489] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-03 14:09:31,851] INFO django.server - "POST /login/ HTTP/1.1" 302 0
+[2025-10-03 14:09:31,857] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:09:31,864] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 14:09:41,326] INFO phishield - Profile accessed by: gave
+[2025-10-03 14:09:41,336] INFO django.server - "GET /profile/ HTTP/1.1" 200 18720
+[2025-10-03 14:09:45,252] INFO django.server - "GET /settings/ HTTP/1.1" 200 20020
+[2025-10-03 14:09:58,211] INFO phishield - Profile accessed by: gave
+[2025-10-03 14:09:58,218] INFO django.server - "GET /profile/ HTTP/1.1" 200 18720
+[2025-10-03 14:12:49,448] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 14:14:57,885] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-03 14:15:02,098] INFO phishield - Profile accessed by: gave
+[2025-10-03 14:15:02,141] INFO django.server - "GET /profile/ HTTP/1.1" 200 18720
+[2025-10-03 14:15:02,733] INFO phishield - Profile accessed by: gave
+[2025-10-03 14:15:02,744] INFO django.server - "GET /profile/ HTTP/1.1" 200 18720
+[2025-10-03 14:15:03,841] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:15:03,852] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-03 14:17:45,289] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:17:45,298] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41780
+[2025-10-03 14:17:45,318] WARNING django.server - "GET /static/images/background.jpg HTTP/1.1" 404 1877
+[2025-10-03 14:17:45,762] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:17:45,778] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41769
+[2025-10-03 14:17:45,796] WARNING django.server - "GET /static/images/background.jpg HTTP/1.1" 404 1877
+[2025-10-03 14:17:45,995] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:17:46,008] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41771
+[2025-10-03 14:17:46,025] WARNING django.server - "GET /static/images/background.jpg HTTP/1.1" 404 1877
+[2025-10-03 14:17:46,154] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:17:46,171] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41782
+[2025-10-03 14:17:46,188] WARNING django.server - "GET /static/images/background.jpg HTTP/1.1" 404 1877
+[2025-10-03 14:23:51,775] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:23:51,796] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41775
+[2025-10-03 14:23:51,919] INFO django.server - "GET /static/phishield/images/background.jpg HTTP/1.1" 200 543517
+[2025-10-03 14:23:51,955] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:23:51,963] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41763
+[2025-10-03 14:23:52,177] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:23:52,185] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41790
+[2025-10-03 14:24:59,705] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:24:59,714] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41781
+[2025-10-03 14:25:00,057] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11793
+[2025-10-03 14:25:00,804] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11849
+[2025-10-03 14:25:03,267] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:25:03,276] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41779
+[2025-10-03 14:27:31,005] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:27:31,026] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41755
+[2025-10-03 14:27:31,051] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 200 919056
+[2025-10-03 14:27:42,010] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:27:42,019] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41771
+[2025-10-03 14:27:42,037] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:28:32,532] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:28:32,544] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41814
+[2025-10-03 14:28:32,562] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:28:47,043] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:28:47,053] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41818
+[2025-10-03 14:28:47,069] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:28:49,659] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:28:49,672] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41771
+[2025-10-03 14:29:13,836] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-03 14:29:13,855] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:29:24,208] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:29:24,217] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41767
+[2025-10-03 14:29:27,140] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-03 14:29:30,911] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-03 14:29:31,890] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-03 14:29:31,910] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:29:33,238] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-03 14:29:34,320] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:29:34,328] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-03 14:29:47,093] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:29:47,101] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-03 14:30:29,655] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:30:29,664] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41782
+[2025-10-03 14:30:29,683] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:30:30,096] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-03 14:30:30,774] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-03 14:30:31,483] INFO phishield - History accessed by: gave
+[2025-10-03 14:30:31,492] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-03 14:30:33,052] INFO phishield - About Us page accessed
+[2025-10-03 14:30:33,063] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-03 14:30:33,518] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-03 14:30:36,382] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-03 14:30:36,763] INFO phishield - About Us page accessed
+[2025-10-03 14:30:36,772] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-03 14:30:37,382] INFO phishield - History accessed by: gave
+[2025-10-03 14:30:37,391] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-03 14:30:38,019] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-03 14:30:38,797] INFO phishield - History accessed by: gave
+[2025-10-03 14:30:38,806] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-03 14:30:42,892] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:30:42,901] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-03 14:30:59,528] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:30:59,538] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41775
+[2025-10-03 14:30:59,554] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:33:21,236] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:33:21,249] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-03 14:33:21,267] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:33:44,635] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:33:44,648] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41766
+[2025-10-03 14:34:14,181] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:34:14,192] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41748
+[2025-10-03 14:34:14,209] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:35:30,246] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-03 14:35:30,268] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-03 14:35:31,259] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-03 14:35:32,607] INFO phishield - History accessed by: gave
+[2025-10-03 14:35:32,618] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-03 14:35:35,977] INFO phishield - History accessed by: gave
+[2025-10-03 14:35:35,987] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-03 14:35:36,462] INFO phishield - About Us page accessed
+[2025-10-03 14:35:36,474] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-03 14:35:37,898] INFO phishield - History accessed by: gave
+[2025-10-03 14:35:37,908] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-03 14:35:41,789] INFO phishield - About Us page accessed
+[2025-10-03 14:35:41,800] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-03 14:35:42,151] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-03 14:35:45,179] INFO phishield - Dashboard accessed by: gave
+[2025-10-03 14:35:45,186] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41764
+[2025-10-03 14:36:14,261] INFO phishield - About Us page accessed
+[2025-10-03 14:36:14,270] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 08:14:17,066] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-05 08:15:15,640] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-05 08:15:22,313] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-05 08:15:22,321] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:15:22,336] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41760
+[2025-10-05 08:15:22,637] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-05 08:15:22,898] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-05 08:15:28,300] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 08:15:29,991] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-05 08:15:32,918] INFO phishield - History accessed by: gave
+[2025-10-05 08:15:32,928] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 08:15:37,336] INFO phishield - About Us page accessed
+[2025-10-05 08:15:37,347] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 08:15:38,495] INFO phishield - History accessed by: gave
+[2025-10-05 08:15:38,505] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 08:15:40,083] INFO phishield - About Us page accessed
+[2025-10-05 08:15:40,095] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 08:15:41,925] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-05 08:15:44,391] INFO phishield - About Us page accessed
+[2025-10-05 08:15:44,400] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 08:15:46,062] INFO phishield - History accessed by: gave
+[2025-10-05 08:15:46,070] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 08:16:02,281] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:16:02,291] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41748
+[2025-10-05 08:16:03,494] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-05 08:16:03,980] INFO phishield - About Us page accessed
+[2025-10-05 08:16:03,990] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 08:16:04,604] INFO phishield - History accessed by: gave
+[2025-10-05 08:16:04,614] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 08:16:41,777] INFO phishield - History accessed by: gave
+[2025-10-05 08:16:41,788] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 08:16:42,966] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:16:42,977] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41775
+[2025-10-05 08:16:53,461] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:16:53,470] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-05 08:16:53,876] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 08:16:54,598] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-05 08:16:54,604] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:16:54,611] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-05 08:16:55,758] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:16:55,768] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-05 08:16:56,136] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 08:16:56,558] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-05 08:16:58,422] INFO phishield - History accessed by: gave
+[2025-10-05 08:16:58,432] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 08:16:58,863] INFO phishield - About Us page accessed
+[2025-10-05 08:16:58,875] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 08:16:59,548] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-05 08:17:00,140] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:17:00,149] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41771
+[2025-10-05 08:17:10,091] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:17:10,103] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41771
+[2025-10-05 08:17:23,782] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:17:23,795] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41775
+[2025-10-05 08:20:18,922] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:20:18,931] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 6017
+[2025-10-05 08:20:41,093] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 08:20:41,105] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41755
+[2025-10-05 09:17:23,387] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:17:23,479] ERROR django.server - "GET /dashboard/ HTTP/1.1" 500 189486
+[2025-10-05 09:19:36,861] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:19:36,872] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50933
+[2025-10-05 09:19:39,563] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:19:39,574] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50918
+[2025-10-05 09:19:52,770] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:19:52,782] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50918
+[2025-10-05 09:20:01,283] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:20:01,294] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41767
+[2025-10-05 09:20:10,898] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:20:10,910] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50935
+[2025-10-05 09:20:27,382] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:20:27,394] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41773
+[2025-10-05 09:20:39,971] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:20:39,984] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50906
+[2025-10-05 09:20:48,704] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:20:48,717] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41784
+[2025-10-05 09:21:02,143] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:21:02,153] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50922
+[2025-10-05 09:21:10,306] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 09:21:10,924] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 09:21:10,934] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50924
+[2025-10-05 12:28:54,444] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-05 12:28:57,899] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 12:28:57,947] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-05 12:28:57,994] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-05 12:28:59,186] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 12:28:59,196] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50924
+[2025-10-05 12:29:00,393] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 12:29:00,760] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-05 12:29:01,363] INFO phishield - History accessed by: gave
+[2025-10-05 12:29:01,373] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-05 12:29:02,170] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 12:29:02,180] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50922
+[2025-10-05 12:29:30,518] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 12:29:30,993] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-05 12:29:31,531] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 12:29:32,091] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 12:29:32,370] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 12:29:32,377] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50935
+[2025-10-05 12:29:32,597] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-05 12:29:32,935] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-05 12:29:33,653] INFO phishield - About Us page accessed
+[2025-10-05 12:29:33,665] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 12:29:34,060] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-05 12:29:34,589] INFO phishield - About Us page accessed
+[2025-10-05 12:29:34,601] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-05 12:29:37,833] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 12:29:37,840] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50906
+[2025-10-05 15:44:31,381] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-05 15:44:50,426] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-05 15:44:50,435] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 15:44:50,448] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50926
+[2025-10-05 15:44:52,547] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
+[2025-10-05 15:44:52,556] INFO django.server - "GET /login/ HTTP/1.1" 200 12149
+[2025-10-05 15:44:58,196] INFO django.server - "GET / HTTP/1.1" 200 3498
+[2025-10-05 15:46:05,634] INFO django.server - "GET /login/ HTTP/1.1" 200 12149
+[2025-10-05 15:46:17,754] INFO django.server - "POST /login/ HTTP/1.1" 302 0
+[2025-10-05 15:46:17,760] INFO phishield - Dashboard accessed by: gave
+[2025-10-05 15:46:17,766] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50924
+[2025-10-06 23:03:39,318] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-06 23:03:45,352] INFO django.server - "GET /dashboard/ HTTP/1.1" 302 0
+[2025-10-06 23:03:45,383] INFO django.server - "GET /login/?next=/dashboard/ HTTP/1.1" 200 12149
+[2025-10-06 23:03:46,767] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 200 919056
+[2025-10-06 23:03:51,376] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-06 23:04:00,985] INFO django.server - "POST /login/?next=/dashboard/ HTTP/1.1" 302 0
+[2025-10-06 23:04:00,992] INFO phishield - Dashboard accessed by: gave
+[2025-10-06 23:04:01,002] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50918
+[2025-10-06 23:05:16,073] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-06 23:43:42,027] INFO phishield - About Us page accessed
+[2025-10-06 23:43:42,064] INFO django.server - "GET /about/ HTTP/1.1" 200 41959
+[2025-10-06 23:43:43,059] INFO phishield - About Us page accessed
+[2025-10-06 23:43:43,072] INFO django.server - "GET /about/ HTTP/1.1" 200 41959
+[2025-10-06 23:44:07,775] INFO phishield - About Us page accessed
+[2025-10-06 23:44:07,790] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-06 23:44:23,269] INFO phishield - About Us page accessed
+[2025-10-06 23:44:23,280] INFO django.server - "GET /about/ HTTP/1.1" 200 41959
+[2025-10-06 23:44:27,186] INFO phishield - Dashboard accessed by: gave
+[2025-10-06 23:44:27,198] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50922
+[2025-10-06 23:44:28,849] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-06 23:44:29,350] INFO phishield - Dashboard accessed by: gave
+[2025-10-06 23:44:29,358] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50918
+[2025-10-06 23:44:30,846] INFO phishield - About Us page accessed
+[2025-10-06 23:44:30,858] INFO django.server - "GET /about/ HTTP/1.1" 200 41959
+[2025-10-06 23:47:41,369] INFO phishield - About Us page accessed
+[2025-10-06 23:47:41,382] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-06 23:47:49,480] INFO phishield - About Us page accessed
+[2025-10-06 23:47:49,494] INFO django.server - "GET /about/ HTTP/1.1" 200 41959
+[2025-10-06 23:47:59,381] INFO phishield - About Us page accessed
+[2025-10-06 23:47:59,642] INFO django.server - "GET /about/ HTTP/1.1" 200 18921
+[2025-10-06 23:48:06,969] INFO phishield - About Us page accessed
+[2025-10-06 23:48:06,982] INFO django.server - "GET /about/ HTTP/1.1" 200 41959
+[2025-10-06 23:51:04,668] INFO phishield - About Us page accessed
+[2025-10-06 23:51:04,682] INFO django.server - "GET /about/ HTTP/1.1" 200 41960
+[2025-10-06 23:51:23,951] INFO phishield - About Us page accessed
+[2025-10-06 23:51:23,965] INFO django.server - "GET /about/ HTTP/1.1" 200 41966
+[2025-10-06 23:52:08,546] INFO phishield - About Us page accessed
+[2025-10-06 23:52:08,562] INFO django.server - "GET /about/ HTTP/1.1" 200 41972
+[2025-10-06 23:52:22,433] INFO phishield - About Us page accessed
+[2025-10-06 23:52:22,447] INFO django.server - "GET /about/ HTTP/1.1" 200 41966
+[2025-10-06 23:52:45,189] INFO phishield - About Us page accessed
+[2025-10-06 23:52:45,200] INFO django.server - "GET /about/ HTTP/1.1" 200 41969
+[2025-10-06 23:54:35,915] INFO phishield - About Us page accessed
+[2025-10-06 23:54:35,929] INFO django.server - "GET /about/ HTTP/1.1" 200 41979
+[2025-10-06 23:56:19,766] INFO phishield - About Us page accessed
+[2025-10-06 23:56:19,791] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-07 00:26:00,618] INFO phishield - Dashboard accessed by: gave
+[2025-10-07 00:26:00,640] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50933
+[2025-10-07 00:36:46,542] INFO phishield - Dashboard accessed by: gave
+[2025-10-07 00:36:46,566] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50931
+[2025-10-07 00:36:46,751] INFO django.server - "GET /static/phishield/images/PhiShieldbg.png HTTP/1.1" 200 1033872
+[2025-10-07 01:01:25,849] INFO phishield - About Us page accessed
+[2025-10-07 01:01:25,873] INFO django.server - "GET /about/ HTTP/1.1" 200 41998
+[2025-10-07 01:01:25,919] INFO django.server - "GET /static/phishield/images/PhiShieldbg.png HTTP/1.1" 304 0
+[2025-10-07 01:01:33,935] INFO phishield - About Us page accessed
+[2025-10-07 01:01:33,949] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:47:35,857] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-08 14:47:43,180] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-08 14:47:43,188] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 14:47:43,205] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50918
+[2025-10-08 14:47:43,259] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-08 14:47:43,323] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-08 14:47:46,229] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 14:47:46,643] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 14:47:46,651] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50922
+[2025-10-08 14:47:47,084] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 14:47:47,533] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-08 14:47:48,565] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 14:47:49,164] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 14:47:49,316] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50935
+[2025-10-08 14:47:49,949] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 14:47:50,359] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-08 14:47:51,010] INFO phishield - History accessed by: gave
+[2025-10-08 14:47:51,018] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-08 14:47:51,538] INFO phishield - About Us page accessed
+[2025-10-08 14:47:51,549] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:47:52,163] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 14:47:52,660] INFO phishield - About Us page accessed
+[2025-10-08 14:47:52,671] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:47:53,121] INFO phishield - History accessed by: gave
+[2025-10-08 14:47:53,131] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-08 14:47:54,015] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 14:47:57,312] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 14:47:57,662] INFO phishield - About Us page accessed
+[2025-10-08 14:47:57,673] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:48:43,450] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-08 14:48:47,578] INFO phishield - About Us page accessed
+[2025-10-08 14:48:47,620] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:51:33,732] INFO phishield - About Us page accessed
+[2025-10-08 14:51:33,746] INFO django.server - "GET /about/ HTTP/1.1" 200 42008
+[2025-10-08 14:51:42,619] INFO phishield - About Us page accessed
+[2025-10-08 14:51:42,631] INFO django.server - "GET /about/ HTTP/1.1" 200 42008
+[2025-10-08 14:52:19,231] INFO phishield - About Us page accessed
+[2025-10-08 14:52:19,244] INFO django.server - "GET /about/ HTTP/1.1" 200 41732
+[2025-10-08 14:52:36,352] INFO phishield - About Us page accessed
+[2025-10-08 14:52:36,363] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:55:16,629] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 14:55:17,907] INFO phishield - About Us page accessed
+[2025-10-08 14:55:17,918] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 14:55:18,591] INFO phishield - History accessed by: gave
+[2025-10-08 14:55:18,600] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-08 14:55:20,279] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-08 14:55:21,214] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 14:55:22,080] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 14:55:22,092] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50924
+[2025-10-08 16:55:12,737] INFO phishield - About Us page accessed
+[2025-10-08 16:55:12,761] INFO django.server - "GET /about/ HTTP/1.1" 200 41988
+[2025-10-08 16:55:13,838] INFO phishield - About Us page accessed
+[2025-10-08 16:55:13,849] INFO django.server - "GET /about/ HTTP/1.1" 200 41988
+[2025-10-08 16:55:31,803] INFO phishield - About Us page accessed
+[2025-10-08 16:55:31,816] INFO django.server - "GET /about/ HTTP/1.1" 200 41988
+[2025-10-08 16:55:37,873] INFO phishield - About Us page accessed
+[2025-10-08 16:55:37,887] INFO django.server - "GET /about/ HTTP/1.1" 200 41988
+[2025-10-08 16:55:48,668] INFO phishield - About Us page accessed
+[2025-10-08 16:55:48,678] INFO django.server - "GET /about/ HTTP/1.1" 200 41988
+[2025-10-08 16:56:56,951] INFO phishield - About Us page accessed
+[2025-10-08 16:56:56,969] INFO django.server - "GET /about/ HTTP/1.1" 200 41645
+[2025-10-08 16:57:07,796] INFO phishield - About Us page accessed
+[2025-10-08 16:57:07,808] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 16:57:22,125] INFO phishield - About Us page accessed
+[2025-10-08 16:57:22,137] INFO django.server - "GET /about/ HTTP/1.1" 200 41631
+[2025-10-08 16:58:56,211] INFO phishield - About Us page accessed
+[2025-10-08 16:58:56,224] INFO django.server - "GET /about/ HTTP/1.1" 200 41989
+[2025-10-08 16:59:48,164] INFO phishield - About Us page accessed
+[2025-10-08 16:59:48,178] INFO django.server - "GET /about/ HTTP/1.1" 200 41947
+[2025-10-08 17:01:38,034] INFO phishield - About Us page accessed
+[2025-10-08 17:01:38,046] INFO django.server - "GET /about/ HTTP/1.1" 200 41937
+[2025-10-08 17:01:58,084] INFO phishield - About Us page accessed
+[2025-10-08 17:01:58,097] INFO django.server - "GET /about/ HTTP/1.1" 200 41858
+[2025-10-08 17:02:41,257] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 17:02:44,453] INFO phishield - History accessed by: gave
+[2025-10-08 17:02:44,464] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-08 17:03:50,323] INFO phishield - History accessed by: gave
+[2025-10-08 17:03:50,334] INFO django.server - "GET /history/ HTTP/1.1" 200 25073
+[2025-10-08 17:04:00,061] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 17:04:02,098] INFO phishield - About Us page accessed
+[2025-10-08 17:04:02,110] INFO django.server - "GET /about/ HTTP/1.1" 200 41858
+[2025-10-08 17:04:04,893] INFO phishield - About Us page accessed
+[2025-10-08 17:04:04,902] INFO django.server - "GET /about/ HTTP/1.1" 200 41858
+[2025-10-08 17:04:05,942] INFO phishield - History accessed by: gave
+[2025-10-08 17:04:05,951] INFO django.server - "GET /history/ HTTP/1.1" 200 25073
+[2025-10-08 17:05:06,957] INFO phishield - History accessed by: gave
+[2025-10-08 17:05:06,968] INFO django.server - "GET /history/ HTTP/1.1" 200 25067
+[2025-10-08 17:05:54,083] INFO phishield - History accessed by: gave
+[2025-10-08 17:05:54,092] INFO django.server - "GET /history/ HTTP/1.1" 200 25026
+[2025-10-08 17:06:11,964] INFO phishield - History accessed by: gave
+[2025-10-08 17:06:11,975] INFO django.server - "GET /history/ HTTP/1.1" 200 25016
+[2025-10-08 17:06:26,554] INFO phishield - History accessed by: gave
+[2025-10-08 17:06:26,563] INFO django.server - "GET /history/ HTTP/1.1" 200 25016
+[2025-10-08 17:06:26,755] INFO phishield - History accessed by: gave
+[2025-10-08 17:06:26,762] INFO django.server - "GET /history/ HTTP/1.1" 200 25016
+[2025-10-08 17:06:26,929] INFO phishield - History accessed by: gave
+[2025-10-08 17:06:26,938] INFO django.server - "GET /history/ HTTP/1.1" 200 25016
+[2025-10-08 17:07:08,541] INFO phishield - History accessed by: gave
+[2025-10-08 17:07:08,553] INFO django.server - "GET /history/ HTTP/1.1" 200 25016
+[2025-10-08 17:07:13,728] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-08 17:07:18,911] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 17:07:21,149] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 17:07:21,160] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50933
+[2025-10-08 17:07:47,629] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 17:07:47,641] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50937
+[2025-10-08 17:08:28,465] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-08 17:08:31,522] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 17:08:38,675] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-08 17:08:39,057] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11841
+[2025-10-08 17:08:39,529] INFO phishield - History accessed by: gave
+[2025-10-08 17:08:39,539] INFO django.server - "GET /history/ HTTP/1.1" 200 25016
+[2025-10-08 17:08:40,187] INFO phishield - About Us page accessed
+[2025-10-08 17:08:40,199] INFO django.server - "GET /about/ HTTP/1.1" 200 41858
+[2025-10-08 17:08:40,654] INFO django.server - "GET /contact/ HTTP/1.1" 200 16870
+[2025-10-08 17:08:42,046] INFO phishield - Dashboard accessed by: gave
+[2025-10-08 17:08:42,055] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50919
+[2025-10-09 11:18:07,813] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-09 11:18:19,201] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-09 11:18:19,211] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:18:19,227] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50946
+[2025-10-09 11:18:19,453] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 304 0
+[2025-10-09 11:18:19,517] WARNING django.server - "GET /favicon.ico HTTP/1.1" 404 8348
+[2025-10-09 11:18:47,031] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:18:47,045] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62852
+[2025-10-09 11:19:01,263] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:19:01,277] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 50919
+[2025-10-09 11:19:08,762] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:19:08,775] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62850
+[2025-10-09 11:19:39,332] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:19:39,340] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62841
+[2025-10-09 11:19:43,716] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-09 11:19:43,723] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:19:43,732] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62852
+[2025-10-09 11:19:50,270] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:19:50,282] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62839
+[2025-10-09 11:19:50,958] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:19:51,510] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 23745
+[2025-10-09 11:19:53,763] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:19:55,054] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 23745
+[2025-10-09 11:19:55,991] INFO phishield - History accessed by: gave
+[2025-10-09 11:19:56,003] INFO django.server - "GET /history/ HTTP/1.1" 200 36920
+[2025-10-09 11:19:57,967] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:20:22,935] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:20:24,063] INFO phishield - About Us page accessed
+[2025-10-09 11:20:24,078] INFO django.server - "GET /about/ HTTP/1.1" 200 53762
+[2025-10-09 11:20:24,602] INFO django.server - "GET /contact/ HTTP/1.1" 200 28774
+[2025-10-09 11:20:26,038] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:20:32,439] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11785
+[2025-10-09 11:20:37,468] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:20:58,938] INFO django.server - "GET /contact/ HTTP/1.1" 200 28774
+[2025-10-09 11:21:00,033] INFO phishield - About Us page accessed
+[2025-10-09 11:21:00,047] INFO django.server - "GET /about/ HTTP/1.1" 200 53762
+[2025-10-09 11:21:00,710] INFO django.server - "GET /contact/ HTTP/1.1" 200 28774
+[2025-10-09 11:21:02,476] INFO phishield - Profile accessed by: gave
+[2025-10-09 11:21:02,498] INFO django.server - "GET /profile/ HTTP/1.1" 200 30679
+[2025-10-09 11:21:06,993] INFO django.server - "GET /settings/ HTTP/1.1" 200 31979
+[2025-10-09 11:21:17,482] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:21:17,492] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62843
+[2025-10-09 11:21:18,950] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-09 11:21:19,431] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 23745
+[2025-10-09 11:21:19,942] INFO phishield - History accessed by: gave
+[2025-10-09 11:21:19,955] INFO django.server - "GET /history/ HTTP/1.1" 200 36920
+[2025-10-09 11:21:21,476] INFO phishield - About Us page accessed
+[2025-10-09 11:21:21,490] INFO django.server - "GET /about/ HTTP/1.1" 200 53762
+[2025-10-09 11:21:22,178] INFO phishield - History accessed by: gave
+[2025-10-09 11:21:22,190] INFO django.server - "GET /history/ HTTP/1.1" 200 36920
+[2025-10-09 11:21:24,603] INFO phishield - About Us page accessed
+[2025-10-09 11:21:24,617] INFO django.server - "GET /about/ HTTP/1.1" 200 53762
+[2025-10-09 11:21:49,753] INFO django.server - "GET /contact/ HTTP/1.1" 200 28774
+[2025-10-09 11:21:55,735] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:21:55,747] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62823
+[2025-10-09 11:21:57,740] INFO phishield - About Us page accessed
+[2025-10-09 11:21:57,754] INFO django.server - "GET /about/ HTTP/1.1" 200 53762
+[2025-10-09 11:21:59,477] INFO phishield - Dashboard accessed by: gave
+[2025-10-09 11:21:59,488] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62835
