@@ -62,8 +62,8 @@ python manage.py runserver
 
 ### Development Team
 - **Michelle Marie P. Habon** (Lead Developer) - michellemarie.habon@cit.edu
-- **Adrian V. Hernandez** (Developer) - adrian.hernandez@cit.edu  
-- **Gave C. Hontiveros** (Developer) - gave.hontiveros@cit.edu
+- **Adrian V. Hernandez** (Backend Developer) - adrian.hernandez@cit.edu  
+- **Gave C. Hontiveros** (Frontend Developer) - gave.hontiveros@cit.edu
 
 ### Project Management Team
 - **Jac Gary F. Cañete** (Product Owner) - jacgary.canete@cit.edu
