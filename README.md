@@ -62,7 +62,7 @@ python manage.py runserver
 
 ### Development Team
 - **Michelle Marie P. Habon** (Lead Developer) - michellemarie.habon@cit.edu
-- **Adrian V. Hernandez** (Backend Developer) - adrian.hernandez@cit.edu  
+- **Adrian V. Hernandez** (Backend Developer) - adrian.hernandez@cit.edu
 - **Gave C. Hontiveros** (Frontend Developer) - gave.hontiveros@cit.edu
 
 ### Project Management Team
@@ -71,7 +71,7 @@ python manage.py runserver
 - **Reenah Mae R. Campilanan** (Scrum Master) - reenahmae.campilanan@cit.edu
 
 ## Deployed Link
-*Coming soon...*
+**Live Application**: https://csit327-g8-phishield-production.up.railway.app/
 
 ---
 
