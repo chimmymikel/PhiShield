@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ------------------------------
 SECRET_KEY = 'django-insecure-6jaqttw(08-+ba(0o+=q#j^tvm&x-97xxpjo$uuzk%$*ad&5qq'
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '*']  # ✅ Added wildcard for dev
+ALLOWED_HOSTS = ['*']  # ✅ Added wildcard for dev
 
 # Security settings for production (commented out for development)
 # SECURE_SSL_REDIRECT = True
