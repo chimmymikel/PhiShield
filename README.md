@@ -12,21 +12,29 @@ A Django-based web application designed to detect and prevent phishing attacks b
 
 ## Technology Stack
 
-- **Backend**: Django 5.2.7
+- **Programming Language**: Python
+- **Web Framework**: Django 5.2.7
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap 5
-- **Database**: SQLite3
-- **Authentication**: Django Auth System
+- **Database**: Supabase (PostgreSQL)
+- **Authentication**: Supabase Auth
 
 ## Installation & Setup
 
+### Prerequisites
+- Python 3.8 or higher
+- pip (Python package manager)
+- Supabase account and project
+
+### Installation Steps
+
 1. Clone the repository:
-```
+```bash
 git clone https://github.com/chimmymikel/PhiShield.git
 cd PhiShield
 ```
 
 2. Create a virtual environment:
-```
+```bash
 # On Windows
 python -m venv venv
 venv\Scripts\activate
@@ -36,23 +44,27 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. Install dependencies:
-```
+3. Install Python dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-4. Run migrations:
+4. Set up environment variables for Supabase:
+```bash
+# Create a .env file with your Supabase credentials
+DATABASE_URL=postgresql://username:password@host:port/database
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_KEY=your_supabase_anon_key
+SUPABASE_SECRET_KEY=your_supabase_secret_key
 ```
+
+5. Run Django migrations:
+```bash
 python manage.py migrate
 ```
 
-5. Create a superuser (optional):
-```
-python manage.py createsuperuser
-```
-
-6. Run the development server:
-```
+6. Run the Django development server:
+```bash
 python manage.py runserver
 ```
 
