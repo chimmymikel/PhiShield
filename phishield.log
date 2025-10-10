@@ -464,3 +464,106 @@ INFO 2025-10-02 13:01:22,842 views Message analysis completed - Risk: suspicious
 [2025-10-07 19:18:46,958] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 200 1480994
 [2025-10-07 19:18:46,967] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 200 188882
 [2025-10-07 19:18:46,970] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 200 542099
+[2025-10-10 13:54:15,475] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-10 13:54:30,428] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:54:30,613] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41718
+[2025-10-10 13:54:31,539] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-10 13:54:31,756] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:54:31,930] INFO django.server - - Broken pipe from ('127.0.0.1', 62552)
+[2025-10-10 13:54:32,531] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:54:32,703] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41716
+[2025-10-10 13:54:33,472] INFO django.server - "GET /check-link/ HTTP/1.1" 200 11730
+[2025-10-10 13:54:34,260] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 11786
+[2025-10-10 13:54:34,946] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:54:35,114] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41716
+[2025-10-10 13:54:37,631] INFO django.server - "POST /logout/ HTTP/1.1" 302 0
+[2025-10-10 13:54:37,639] INFO django.server - "GET /login/ HTTP/1.1" 200 12094
+[2025-10-10 13:55:12,041] INFO django.server - "GET /login/ HTTP/1.1" 200 23839
+[2025-10-10 13:55:12,059] WARNING django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 404 1883
+[2025-10-10 13:55:22,422] INFO django.server - "POST /login/ HTTP/1.1" 200 24249
+[2025-10-10 13:55:22,439] WARNING django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 404 1883
+[2025-10-10 13:55:32,214] INFO django.server - "POST /login/ HTTP/1.1" 302 0
+[2025-10-10 13:55:32,432] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:55:32,606] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 53686
+[2025-10-10 13:55:32,627] WARNING django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 404 1883
+[2025-10-10 13:56:35,224] INFO phishield - About Us page accessed
+[2025-10-10 13:56:35,782] INFO django.server - "GET /about/ HTTP/1.1" 200 31407
+[2025-10-10 13:56:36,086] INFO django.server - "GET /static/phishield/images/habon.png HTTP/1.1" 200 163886
+[2025-10-10 13:56:36,098] WARNING django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 404 1883
+[2025-10-10 13:56:36,424] INFO django.server - "GET /static/phishield/images/canete.png HTTP/1.1" 200 338010
+[2025-10-10 13:56:36,480] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 200 542099
+[2025-10-10 13:56:36,507] INFO django.server - "GET /static/phishield/images/hontiveros.png HTTP/1.1" 200 356776
+[2025-10-10 13:56:36,522] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 200 188882
+[2025-10-10 13:56:36,528] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 200 1480994
+[2025-10-10 13:59:08,152] INFO phishield - About Us page accessed
+[2025-10-10 13:59:08,802] INFO django.server - "GET /about/ HTTP/1.1" 200 31407
+[2025-10-10 13:59:08,819] INFO django.server - "GET /static/phishield/images/habon.png HTTP/1.1" 304 0
+[2025-10-10 13:59:08,820] INFO django.server - "GET /static/phishield/images/canete.png HTTP/1.1" 304 0
+[2025-10-10 13:59:08,821] INFO django.server - "GET /static/phishield/images/hontiveros.png HTTP/1.1" 304 0
+[2025-10-10 13:59:08,821] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 304 0
+[2025-10-10 13:59:08,822] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 304 0
+[2025-10-10 13:59:08,822] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 304 0
+[2025-10-10 13:59:08,833] INFO django.server - "GET /static/phishield/images/bg.jpg HTTP/1.1" 200 919056
+[2025-10-10 13:59:19,245] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:59:19,424] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 53659
+[2025-10-10 13:59:58,442] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 13:59:58,616] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62843
+[2025-10-10 14:07:18,195] INFO phishield - About Us page accessed
+[2025-10-10 14:07:18,749] INFO django.server - "GET /about/ HTTP/1.1" 200 53762
+[2025-10-10 14:19:07,769] INFO phishield - About Us page accessed
+[2025-10-10 14:19:08,344] INFO django.server - "GET /about/ HTTP/1.1" 200 53064
+[2025-10-10 14:19:08,365] INFO django.server - "GET /static/phishield/images/habon.png HTTP/1.1" 304 0
+[2025-10-10 14:19:08,368] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 304 0
+[2025-10-10 14:19:08,368] INFO django.server - "GET /static/phishield/images/hontiveros.png HTTP/1.1" 304 0
+[2025-10-10 14:19:08,370] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 304 0
+[2025-10-10 14:19:08,370] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 304 0
+[2025-10-10 14:19:08,371] INFO django.server - "GET /static/phishield/images/canete.png HTTP/1.1" 304 0
+[2025-10-10 14:19:46,966] INFO phishield - About Us page accessed
+[2025-10-10 14:19:47,520] INFO django.server - "GET /about/ HTTP/1.1" 200 31407
+[2025-10-10 14:19:57,678] INFO phishield - About Us page accessed
+[2025-10-10 14:19:57,943] INFO django.server - "GET /about/ HTTP/1.1" 200 53064
+[2025-10-10 14:21:45,955] INFO phishield - About Us page accessed
+[2025-10-10 14:21:46,222] INFO django.server - "GET /about/ HTTP/1.1" 200 52933
+[2025-10-10 14:21:56,305] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 14:21:56,489] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62790
+[2025-10-10 14:21:58,120] INFO phishield - About Us page accessed
+[2025-10-10 14:21:58,383] INFO django.server - "GET /about/ HTTP/1.1" 200 52933
+[2025-10-10 14:21:58,407] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 304 0
+[2025-10-10 14:21:58,407] INFO django.server - "GET /static/phishield/images/hontiveros.png HTTP/1.1" 304 0
+[2025-10-10 14:21:58,407] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 304 0
+[2025-10-10 14:21:58,407] INFO django.server - "GET /static/phishield/images/habon.png HTTP/1.1" 304 0
+[2025-10-10 14:21:58,407] INFO django.server - "GET /static/phishield/images/canete.png HTTP/1.1" 304 0
+[2025-10-10 14:21:58,408] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 304 0
+[2025-10-10 14:24:08,880] INFO phishield - About Us page accessed
+[2025-10-10 14:24:09,449] INFO django.server - "GET /about/ HTTP/1.1" 200 52933
+[2025-10-10 14:24:20,650] INFO phishield - About Us page accessed
+[2025-10-10 14:24:20,918] INFO django.server - "GET /about/ HTTP/1.1" 200 52933
+[2025-10-10 14:24:51,703] INFO phishield - About Us page accessed
+[2025-10-10 14:24:51,968] INFO django.server - "GET /about/ HTTP/1.1" 200 52575
+[2025-10-10 14:25:35,773] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 14:25:35,952] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62808
+[2025-10-10 14:25:42,092] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 14:25:42,271] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62841
+[2025-10-10 14:27:33,088] INFO phishield - About Us page accessed
+[2025-10-10 14:27:33,352] INFO django.server - "GET /about/ HTTP/1.1" 200 52575
+[2025-10-10 14:27:33,378] INFO django.server - "GET /static/phishield/images/habon.png HTTP/1.1" 304 0
+[2025-10-10 14:27:33,387] INFO django.server - "GET /static/phishield/images/canete.png HTTP/1.1" 304 0
+[2025-10-10 14:27:33,387] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 304 0
+[2025-10-10 14:27:33,387] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 304 0
+[2025-10-10 14:27:33,387] INFO django.server - "GET /static/phishield/images/hontiveros.png HTTP/1.1" 304 0
+[2025-10-10 14:27:33,389] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 304 0
+[2025-10-10 14:27:48,746] INFO phishield - About Us page accessed
+[2025-10-10 14:27:49,294] INFO django.server - "GET /about/ HTTP/1.1" 200 52581
+[2025-10-10 14:28:07,251] INFO phishield - About Us page accessed
+[2025-10-10 14:28:07,520] INFO django.server - "GET /about/ HTTP/1.1" 200 52594
+[2025-10-10 14:28:23,562] INFO phishield - History accessed by: gave
+[2025-10-10 14:28:23,739] INFO django.server - "GET /history/ HTTP/1.1" 200 36971
+[2025-10-10 14:28:39,927] INFO phishield - History accessed by: gave
+[2025-10-10 14:28:40,103] INFO django.server - "GET /history/ HTTP/1.1" 200 36977
+[2025-10-10 14:28:41,630] INFO django.server - "GET /analyze-message/ HTTP/1.1" 200 23745
+[2025-10-10 14:28:43,089] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-10 14:28:44,189] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 14:28:44,365] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62852
+[2025-10-10 14:28:46,820] INFO django.server - "GET /check-link/ HTTP/1.1" 200 23689
+[2025-10-10 14:28:48,700] INFO phishield - Dashboard accessed by: gave
+[2025-10-10 14:28:48,874] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 62839
