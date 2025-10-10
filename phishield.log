@@ -452,3 +452,15 @@ INFO 2025-10-02 13:01:22,842 views Message analysis completed - Risk: suspicious
 [2025-10-02 20:57:48,667] INFO django.server - "POST /register/ HTTP/1.1" 302 0
 [2025-10-02 20:57:49,006] INFO phishield - Dashboard accessed by: phishield
 [2025-10-02 20:57:49,273] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 42421
+[2025-10-07 19:18:41,467] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-10-07 19:18:44,315] INFO django.server - "GET / HTTP/1.1" 302 0
+[2025-10-07 19:18:44,651] INFO phishield - Dashboard accessed by: person
+[2025-10-07 19:18:44,920] INFO django.server - "GET /dashboard/ HTTP/1.1" 200 41731
+[2025-10-07 19:18:46,433] INFO phishield - About Us page accessed
+[2025-10-07 19:18:46,826] INFO django.server - "GET /about/ HTTP/1.1" 200 19450
+[2025-10-07 19:18:46,912] INFO django.server - "GET /static/phishield/images/hontiveros.png HTTP/1.1" 200 356776
+[2025-10-07 19:18:46,947] INFO django.server - "GET /static/phishield/images/habon.png HTTP/1.1" 200 163886
+[2025-10-07 19:18:46,955] INFO django.server - "GET /static/phishield/images/canete.png HTTP/1.1" 200 338010
+[2025-10-07 19:18:46,958] INFO django.server - "GET /static/phishield/images/butihen.png HTTP/1.1" 200 1480994
+[2025-10-07 19:18:46,967] INFO django.server - "GET /static/phishield/images/pfp.jpg HTTP/1.1" 200 188882
+[2025-10-07 19:18:46,970] INFO django.server - "GET /static/phishield/images/campilanan.jpg HTTP/1.1" 200 542099
